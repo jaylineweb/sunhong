@@ -305,38 +305,28 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
     .logo-marquee__item img{height:36px;}
 }                
 
+.site-footer{padding:60px 0; background:#fafafa; color:#919191; font-size:14px;}
+.site-footer__inner{display:grid; max-width:1400px; margin:auto; grid-template-columns:160px 1.5fr 1fr 1fr 1.2fr; gap:40px; align-items:start;}
+.site-footer img{display:block;}
 
-.site-footer{padding:80px 20px; background:#f9fafb;}
-
-.site-footer__inner{display:grid; max-width:1200px; margin:0 auto; grid-template-columns:2fr 1fr 1fr; gap:60px;}
-
-/* 회사 */
-.footer-company__logo{margin-bottom:16px; font-size:24px;}
-
-.footer-company__info{color:#666; font-style:normal; font-size:14px; line-height:1.7;}
-
-/* 공통 타이틀 */
-.footer-title{margin-bottom:16px; font-size:16px; font-weight:600;}
-
+/* 로고 */
+.site-footer__logo img{width:56px;}
+/* 회사정보 */
+.site-footer__company p{margin:0 0 6px;}
 /* 사이트맵 */
-.footer-sitemap__list,
-.footer-contact__list{margin:0; padding:0; list-style:none;}
+.site-footer__nav strong{display:block; margin-bottom:10px;}
+.site-footer__nav ul{margin:0; padding:0; list-style:none;}
+.site-footer__nav li{margin-bottom:6px;}
+.site-footer a{color:#919191; text-decoration:none;}
 
-.footer-sitemap__list li,
-.footer-contact__list li{margin-bottom:8px;}
+.site-footer a:hover{color:#222;}
 
-.footer-sitemap a,
-.footer-contact a{color:#666; font-size:14px; text-decoration:none;}
+/* 약관 */
+.site-footer__policy a{display:block; margin-bottom:6px;}
+/* 연락처 */
+.site-footer__contact{display:flex; flex-direction:column; gap:10px; align-items:flex-end;}
+.site-footer__contact a{display:flex; font-weight:600; align-items:center; gap:6px;}
 
-.footer-sitemap a:hover,
-.footer-contact a:hover{color:#000;}
-
-/* 버튼 */
-.footer-contact__btn{display:inline-block; margin-top:20px; padding:10px 20px; border:2px solid #f8831a; border-radius:4px; color:#f8831a; font-size:14px; text-decoration:none;}
-
-.footer-contact__btn:hover{background:#f8831a; color:#fff;}
-
-/* 모바일 */
-@media(max-width:768px){
-  .site-footer__inner{grid-template-columns:1fr; gap:40px;}
-}
+/* 문의 버튼 */
+.site-footer__cta{margin-top:10px; padding:8px 16px; border:2px solid #f8831a; border-radius:6px; color:#f8831a !important; transition:.2s;}
+.site-footer__cta:hover{background:#f8831a; color:#fff !important;}
