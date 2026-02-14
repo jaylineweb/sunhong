@@ -236,7 +236,7 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
     .products__subtitle{font-size:18px;}
     .products__list{flex-wrap:wrap; justify-content:center; gap:20px;}
     .products__item{width:min(319px, calc(50% - 10px));}
-    .products__item img{width:100%; height:auto; aspect-ratio:1;}
+    .products__item img{width:100%; height:auto; aspect-ratio:1;}   
     .products__more-btn{font-size:16px; padding:6px 14px;}
 }
 @media (max-width:768px){
@@ -257,4 +257,86 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
     .products__item{padding:8px;}
     .products__name{font-size:13px;}
     .products__more-btn{font-size:14px;}
+}
+
+/* OUR PARTNERS 타이틀 영역 */
+.rowgroup5{padding:120px 0;}
+.partners-title{width:100%; padding:20px 0 34px;}
+.partners-title__heading{margin:0; color:#f8831a; font-size:42px; font-weight:600; font-family:"Noto Sans", sans-serif; text-align:center; line-height:1.2;}
+.partners_desc{margin-top:1.3rem;font-size:20px;font-family:"NotoSansKR";font-weight:400;color:#000;line-height:24px;word-wrap:break-word;text-align:center;}
+.logo-marquee{overflow:hidden; width:100%; padding:40px 0; background:#fff;}
+.logo-marquee__viewport{display:flex; width:max-content; animation:marquee-left 30s linear infinite;}
+.logo-marquee__track{display:flex; align-items:center; gap:24px;}
+.logo-marquee__item img{opacity:0.8; width:auto; height:60px; transition:opacity .3s ease; object-fit:contain;}
+.logo-marquee__item img:hover{opacity:1;}
+
+/* 핵심 */
+@keyframes marquee-left{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* ========== media query: rowgroup5 (partners) ========== */
+@media (max-width:1280px){
+    .rowgroup5{padding:80px 24px;}
+    .partners-title{padding:16px 0 28px;}
+    .partners-title__heading{font-size:36px;}
+    .partners_desc{font-size:18px; line-height:22px;}
+    .logo-marquee{padding:32px 0;}
+    .logo-marquee__track{gap:20px;}
+    .logo-marquee__item img{height:52px;}
+}
+@media (max-width:768px){
+    .rowgroup5{padding:60px 16px;}
+    .partners-title{padding:12px 0 20px;}
+    .partners-title__heading{font-size:28px;}
+    .partners_desc{font-size:16px; margin-top:1rem; line-height:20px;}
+    .logo-marquee{padding:24px 0;}
+    .logo-marquee__track{gap:16px;}
+    .logo-marquee__item img{height:44px;}
+}
+@media (max-width:480px){
+    .rowgroup5{padding:40px 12px;}
+    .partners-title{padding:10px 0 16px;}
+    .partners-title__heading{font-size:22px;}
+    .partners_desc{font-size:14px; line-height:18px;}
+    .logo-marquee{padding:20px 0;}
+    .logo-marquee__track{gap:12px;}
+    .logo-marquee__item img{height:36px;}
+}                
+
+
+.site-footer{padding:80px 20px; background:#f9fafb;}
+
+.site-footer__inner{display:grid; max-width:1200px; margin:0 auto; grid-template-columns:2fr 1fr 1fr; gap:60px;}
+
+/* 회사 */
+.footer-company__logo{margin-bottom:16px; font-size:24px;}
+
+.footer-company__info{color:#666; font-style:normal; font-size:14px; line-height:1.7;}
+
+/* 공통 타이틀 */
+.footer-title{margin-bottom:16px; font-size:16px; font-weight:600;}
+
+/* 사이트맵 */
+.footer-sitemap__list,
+.footer-contact__list{margin:0; padding:0; list-style:none;}
+
+.footer-sitemap__list li,
+.footer-contact__list li{margin-bottom:8px;}
+
+.footer-sitemap a,
+.footer-contact a{color:#666; font-size:14px; text-decoration:none;}
+
+.footer-sitemap a:hover,
+.footer-contact a:hover{color:#000;}
+
+/* 버튼 */
+.footer-contact__btn{display:inline-block; margin-top:20px; padding:10px 20px; border:2px solid #f8831a; border-radius:4px; color:#f8831a; font-size:14px; text-decoration:none;}
+
+.footer-contact__btn:hover{background:#f8831a; color:#fff;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .site-footer__inner{grid-template-columns:1fr; gap:40px;}
 }
