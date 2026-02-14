@@ -1,5 +1,24 @@
 @charset "UTF-8";
 
+/*NotoSansKR*/
+@font-face {
+    font-family:"NotoSansKR";
+    font-weight:500;
+    src: url("../fonts/notosans/NotoSansKR500.woff2") format("woff2"),
+    url("../fonts/notosans/NotoSansKR500.woff") format("woff");
+}
+@font-face {
+    font-family:"NotoSansKR";
+    font-weight:700;
+    src: url("../fonts/notosans/NotoSansKR700.woff2") format("woff2"),
+    url("../fonts/notosans/NotoSansKR700.woff") format("woff");
+}
+@font-face {
+    font-family:"NotoSansKR";
+    font-weight:900;
+    src: url("../fonts/notosans/NotoSansKR900.woff2") format("woff2"),
+    url("../fonts/notosans/NotoSansKR900.woff") format("woff");
+}
 /*Pretendard*/
 @font-face {
     font-family:"Pretendard";
