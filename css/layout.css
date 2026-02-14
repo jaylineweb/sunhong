@@ -330,3 +330,34 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 /* 문의 버튼 */
 .site-footer__cta{margin-top:10px; padding:8px 16px; border:2px solid #f8831a; border-radius:6px; color:#f8831a !important; transition:.2s;}
 .site-footer__cta:hover{background:#f8831a; color:#fff !important;}
+
+/* ========== media query: site-footer ========== */
+@media (max-width:1280px){
+    .site-footer{padding:80px 24px;}
+    .site-footer__inner{grid-template-columns:120px 1fr 1fr 1fr; gap:32px;}
+    .site-footer__contact{grid-column:1 / -1; align-items:flex-start;}
+}
+@media (max-width:768px){
+    .site-footer{padding:60px 16px; font-size:13px;}
+    .site-footer__inner{grid-template-columns:1fr 1fr; gap:28px 24px;}
+    .site-footer__logo{grid-column:1 / -1;}
+    .site-footer__logo img{width:48px;}
+    .site-footer__company{grid-column:1 / -1;}
+    .site-footer__nav strong{margin-bottom:8px;}
+    .site-footer__nav li{margin-bottom:4px;}
+    .site-footer__contact{grid-column:1 / -1; align-items:flex-start; gap:8px;}
+    .site-footer__cta{padding:6px 14px; font-size:13px;}
+}
+@media (max-width:480px){
+    .site-footer{padding:40px 12px; font-size:12px;}
+    .site-footer__inner{grid-template-columns:1fr; gap:24px; text-align:center;}
+    .site-footer__logo{justify-self:center;}
+    .site-footer__company{text-align:center;}
+    .site-footer__nav{text-align:center;}
+    .site-footer__nav ul{display:inline-block; text-align:left;}
+    .site-footer__policy{text-align:center;}
+    .site-footer__policy a{display:inline-block; margin:0 6px 6px 0;}
+    .site-footer__contact{align-items:center; text-align:center;}
+    .site-footer__contact a{justify-content:center;}
+    .site-footer__cta{margin-top:8px;}
+}
