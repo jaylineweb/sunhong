@@ -113,3 +113,21 @@
   .partner-section{padding:80px 20px;}
 }
 
+
+.yemat-map-section{padding:120px 0;}
+.yemat-map-section .inner{max-width:1200px; margin:0 auto; padding:0 20px;}
+.map-title{margin-bottom:40px; color:#f8831a; font-size:42px; text-align:center;}
+.map-wrap{display:grid; grid-template-columns:1fr 360px; gap:40px;}
+#daumRoughmapContainer1771079586917{width:100%; height:auto;}
+.map-info{display:flex; flex-direction:column; justify-content:center;}
+.map-info strong{margin-bottom:8px; font-size:20px;}
+.map-info p{margin-bottom:20px; color:#999;}
+.map-btn{display:inline-block; width:fit-content; padding:10px 16px; border:1px solid #000; color:#333333;transition:.3s;}
+.map-btn:hover{background:#000; color:#fff;}
+
+/* 모바일 */
+@media(max-width:768px){
+    .map-wrap{grid-template-columns:1fr;}
+    #daumRoughmapContainer1771079586917{height:auto;}
+}
+
