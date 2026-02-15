@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+.sub-nav{margin-top:1%;margin-bottom:80px;}
+.sub-nav__list{display:flex; justify-content:center; gap:40px;}
+.sub-nav__list a{padding-bottom:6px; color:#666; font-size:16px; transition:.2s;}
+.sub-nav__list a:hover{color:#000;}
+.sub-nav__list .is-active a{border-bottom:2px solid #f8831a; color:#000; font-weight:600;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .sub-nav__list{flex-wrap:wrap; gap:20px;}
+}
+
+
 .brand-story{padding:80px 20px;}
 .brand-why{max-width:900px; margin:0 auto; text-align:center;}
 .brand-title{margin-bottom:30px; color:#f27f1d; font-size:28px; font-weight:700;}
