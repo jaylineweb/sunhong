@@ -113,7 +113,7 @@ if (carousel) {
     dot.addEventListener('click', () => {
       stopAutoPlay();
       goToSlide(i);
-      // startAutoPlay();
+      startAutoPlay();
     });
   });
 
