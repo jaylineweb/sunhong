@@ -176,3 +176,31 @@
   .store-cta{padding:80px 20px;}
   .store-cta__text{font-size:18px;}
 }
+
+
+.greeting{padding:120px 0;font-size: 0;line-height: 0;}
+.greeting-inner{position: relative;max-width: 1568px;margin:0 auto;padding:0 20px;}
+.greeting-inner:before{
+  display:block;
+  position: absolute;
+  top: 56px;
+  right: -158px;
+  width: 800px;
+  height: 943px;
+  background-image: url(../images/sub/greeting.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  z-index: 17;
+  content:'';
+}
+.greeting-text h2{margin-bottom: 143px;font-size: 49.385px;font-family: "Pretendard";font-weight: 600;line-height: 1.2;}
+.greeting-text p{margin-bottom: 65px;color:#222;font-size: 41px;line-height: 1.2;letter-spacing: -0.025em;}
+.greeting-image img{display:block;width:100%;max-width: 800px;margin-left:auto;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .greeting-inner{grid-template-columns:1fr; gap:40px;}
+  .greeting-text h2{font-size:36px;}
+  .greeting-image img{margin:0 auto;}
+}
