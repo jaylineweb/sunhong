@@ -70,9 +70,24 @@ if (lang && langBtn) {
   });
 }
 
-// Carousel
+// Carousel (Owl Carousel 스타일 옵션 참고)
 const carousel = document.querySelector('.carousel');
-const CAROUSEL_SWIPE_BREAKPOINT = 1000; // 1000px 이하에서만 스와이프 활성화
+const carouselConfig = {
+  loop: true,
+  items: 1,
+  nav: false,
+  dots: true,
+  mouseDrag: false,              // 기본: 마우스 드래그 끔
+  touchDrag: true,               // 기본: 터치 스와이프 켜짐
+  autoplay: true,
+  autoplaySpeed: 5000,
+  dragThreshold: 50,
+  responsive: {
+    0:   { mouseDrag: true, touchDrag: true },
+    640: { mouseDrag: true, touchDrag: true },
+    1000: { mouseDrag: true, touchDrag: true }
+  }
+};
 
 if (carousel) {
   const slides = carousel.querySelectorAll('.carousel-slide');
@@ -95,19 +110,35 @@ if (carousel) {
   }
 
   function startAutoPlay() {
-    autoPlayTimer = setInterval(nextSlide, 5000);
+    if (!carouselConfig.autoplay) return;
+    autoPlayTimer = setInterval(nextSlide, carouselConfig.autoplaySpeed);
   }
 
   function stopAutoPlay() {
     clearInterval(autoPlayTimer);
   }
 
-  function isSwipeEnabled() {
-    return window.matchMedia('(max-width: ' + CAROUSEL_SWIPE_BREAKPOINT + 'px)').matches;
+  // Owl처럼 responsive에서 현재 너비에 맞는 옵션 반환 (가장 큰 breakpoint <= width)
+  function getResponsiveOption(optionName) {
+    const w = window.innerWidth;
+    const breaks = Object.keys(carouselConfig.responsive).map(Number).sort((a, b) => a - b);
+    let breakpoint = null;
+    for (let i = 0; i < breaks.length; i++) {
+      if (breaks[i] <= w) breakpoint = breaks[i];
+    }
+    const resp = breakpoint != null ? carouselConfig.responsive[breakpoint] : {};
+    return resp[optionName] !== undefined ? resp[optionName] : carouselConfig[optionName];
   }
 
-  // Autoplay 비활성화 (필요 시 아래 주석 해제)
-  // startAutoPlay();
+  function isTouchDragEnabled() {
+    return getResponsiveOption('touchDrag');
+  }
+
+  function isMouseDragEnabled() {
+    return getResponsiveOption('mouseDrag');
+  }
+
+  if (carouselConfig.autoplay) startAutoPlay();
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
@@ -118,23 +149,39 @@ if (carousel) {
   });
 
   carousel.addEventListener('mouseenter', stopAutoPlay);
-  carousel.addEventListener('mouseleave', () => {}); // autoplay 꺼둔 상태라 비움
+  carousel.addEventListener('mouseleave', startAutoPlay);
 
-  // 1000px 이하에서 스와이프로 슬라이드 전환
+  const threshold = carouselConfig.dragThreshold || 50;
+
+  // 터치 스와이프 (touchDrag)
   let touchStartX = 0;
   let touchEndX = 0;
-
   carousel.addEventListener('touchstart', (e) => {
-    if (!isSwipeEnabled()) return;
+    if (!isTouchDragEnabled()) return;
     touchStartX = e.changedTouches[0].clientX;
   }, { passive: true });
 
   carousel.addEventListener('touchend', (e) => {
-    if (!isSwipeEnabled()) return;
+    if (!isTouchDragEnabled()) return;
     touchEndX = e.changedTouches[0].clientX;
     const diff = touchStartX - touchEndX;
-    const threshold = 50;
     if (diff > threshold) nextSlide();
     else if (diff < -threshold) prevSlide();
   }, { passive: true });
+
+  // 마우스 드래그 (mouseDrag, Owl의 mouseDrag)
+  let mouseStartX = 0;
+  let mouseEndX = 0;
+  carousel.addEventListener('mousedown', (e) => {
+    if (!isMouseDragEnabled()) return;
+    mouseStartX = e.clientX;
+  });
+
+  carousel.addEventListener('mouseup', (e) => {
+    if (!isMouseDragEnabled()) return;
+    mouseEndX = e.clientX;
+    const diff = mouseStartX - mouseEndX;
+    if (diff > threshold) nextSlide();
+    else if (diff < -threshold) prevSlide();
+  });
 }
