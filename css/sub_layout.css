@@ -22,13 +22,9 @@
 
 
 .history{max-width:1100px; margin:0 auto; padding:100px 20px;}
-
 .history-title{margin-bottom:40px; color:#f27f1d; font-size:32px; font-weight:700; text-align:center;}
-
 .history-group{margin-bottom:80px;}
-
 .history-year{margin-bottom:40px; color:#f27f1d; font-size:22px; text-align:center;}
-
 .history-row{display:flex; gap:40px; align-items:center;}
 
 .history-image,
@@ -180,27 +176,39 @@
 
 .greeting{padding:120px 0;font-size: 0;line-height: 0;}
 .greeting-inner{position: relative;max-width: 1568px;margin:0 auto;padding:0 20px;}
-.greeting-inner:before{
-  display:block;
-  position: absolute;
-  top: 56px;
-  right: -158px;
-  width: 800px;
-  height: 943px;
-  background-image: url(../images/sub/greeting.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  z-index: 17;
-  content:'';
-}
-.greeting-text h2{margin-bottom: 143px;font-size: 49.385px;font-family: "Pretendard";font-weight: 600;line-height: 1.2;}
+.greeting-inner:before{display:block;position:absolute;top:56px;right:-158px;width:800px;height:943px;background-image:url(../images/sub/greeting.png);background-repeat:no-repeat;background-size:cover;background-position:center;z-index:17;content:'';}
+.greeting-text h2{margin-bottom:143px;font-size: 49.385px;font-family: "Pretendard";font-weight: 600;line-height: 1.2;}
 .greeting-text p{margin-bottom: 65px;color:#222;font-size: 41px;line-height: 1.2;letter-spacing: -0.025em;}
 .greeting-image img{display:block;width:100%;max-width: 800px;margin-left:auto;}
 
 /* 모바일 */
-@media(max-width:768px){
+/* @media(max-width:768px){
   .greeting-inner{grid-template-columns:1fr; gap:40px;}
   .greeting-text h2{font-size:36px;}
   .greeting-image img{margin:0 auto;}
+} */
+
+/* ========== media query: greeting (반응형) ========== */
+@media (max-width:1280px){
+  .greeting{padding:80px 0;}
+  .greeting-inner{padding:0 24px;}
+  .greeting-inner:before{top:40px;right: 0;width: 376px;height: 507px;background-size:contain;}
+  .greeting-text h2{margin-bottom:80px; font-size:40px;}
+  .greeting-text p{margin-bottom: 30px;font-size: 27px;}
+  .greeting-image img{max-width:100%;}
+}
+@media (max-width:768px){
+  .greeting{padding:60px 0;}
+  .greeting-inner{padding:0 16px;}
+  .greeting-inner:before{position: static;width:320px;height:377px;background-size:contain;opacity:0.6;margin: 0 auto;}
+  .greeting-text h2{margin-bottom:48px; font-size:28px;}
+  .greeting-text p{margin-bottom:32px; font-size:22px;}
+  .greeting-image img{max-width:100%; margin-left:0; margin-right:auto;}
+}
+@media (max-width:480px){
+  .greeting{padding:40px 0;}
+  .greeting-inner{padding:0 12px;}
+  .greeting-inner:before{top:16px; right:-20px; width:220px; height:259px; background-size:contain; opacity:0.5;}
+  .greeting-text h2{margin-bottom:32px; font-size:24px;}
+  .greeting-text p{margin-bottom:24px; font-size:18px;}
 }
