@@ -131,3 +131,39 @@
     #daumRoughmapContainer1771079586917{height:auto;}
 }
 
+
+.product-section{padding:100px 0;}
+.product-section .inner{max-width:1200px; margin:0 auto; padding:0 20px;}
+.product-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:60px 40px;}
+.product-card{text-align:center;}
+.product-image{display:flex; height:420px; margin-bottom:20px; align-items:center; justify-content:center;}
+.product-image img{max-width:100%; max-height:100%; object-fit:contain;}
+.product-content h3{margin-bottom:8px; color:#333; font-size:20px;}
+.product-content h3 span{display:block; font-size:16px; font-weight:normal;}
+.product-content p{margin-bottom:8px; color:#555;}
+.product-content small{color:#999;}
+
+/* 반응형 */
+@media (max-width:1024px){
+  .product-grid{grid-template-columns:repeat(2, 1fr);}
+}
+
+@media (max-width:768px){
+  .product-grid{grid-template-columns:1fr;}
+  .product-image{height:320px;}
+}
+
+.store-cta{position:relative; padding:120px 20px; background-image:url("https://cdn.imweb.me/thumbnail/20251015/ca33fd72445c8.jpg"); background-position:center; background-size:cover;}
+
+/* 오버레이 */
+.store-cta::before{position:absolute; background:rgba(0,0,0,.3); content:""; inset:0;}
+.store-cta__inner{position:relative; z-index:2; text-align:center;}
+.store-cta__text{margin-bottom:32px; color:#fff; font-size:22px; font-weight:600;}
+.store-cta__btn{display:inline-block; padding:14px 32px; border:1px solid #fff; color:#fff; transition:.3s ease;}
+.store-cta__btn:hover{background:#fff; color:#000;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .store-cta{padding:80px 20px;}
+  .store-cta__text{font-size:18px;}
+}
