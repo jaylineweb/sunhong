@@ -72,6 +72,8 @@ if (lang && langBtn) {
 
 // Carousel
 const carousel = document.querySelector('.carousel');
+const CAROUSEL_SWIPE_BREAKPOINT = 1000; // 1000px 이하에서만 스와이프 활성화
+
 if (carousel) {
   const slides = carousel.querySelectorAll('.carousel-slide');
   const dots = carousel.querySelectorAll('.carousel-dot');
@@ -88,6 +90,10 @@ if (carousel) {
     goToSlide(currentIndex + 1);
   }
 
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+
   function startAutoPlay() {
     autoPlayTimer = setInterval(nextSlide, 5000);
   }
@@ -96,16 +102,39 @@ if (carousel) {
     clearInterval(autoPlayTimer);
   }
 
+  function isSwipeEnabled() {
+    return window.matchMedia('(max-width: ' + CAROUSEL_SWIPE_BREAKPOINT + 'px)').matches;
+  }
+
+  // Autoplay 비활성화 (필요 시 아래 주석 해제)
+  // startAutoPlay();
+
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
       stopAutoPlay();
       goToSlide(i);
-      startAutoPlay();
+      // startAutoPlay();
     });
   });
 
   carousel.addEventListener('mouseenter', stopAutoPlay);
-  carousel.addEventListener('mouseleave', startAutoPlay);
+  carousel.addEventListener('mouseleave', () => {}); // autoplay 꺼둔 상태라 비움
 
-  startAutoPlay();
+  // 1000px 이하에서 스와이프로 슬라이드 전환
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    if (!isSwipeEnabled()) return;
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    if (!isSwipeEnabled()) return;
+    touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    const threshold = 50;
+    if (diff > threshold) nextSlide();
+    else if (diff < -threshold) prevSlide();
+  }, { passive: true });
 }
