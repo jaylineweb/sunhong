@@ -217,3 +217,47 @@
   .greeting-text h2{margin-bottom:32px; font-size:24px;}
   .greeting-text p{margin-bottom:24px; font-size:18px;}
 }
+
+.cert-hero{position:relative; padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/b9467af90e355.png") center/cover no-repeat;}
+/* 어두운 오버레이 */
+.cert-hero::before{position:absolute; background:rgba(0,0,0,.35); content:""; inset:0;}
+.cert-hero .inner{position:relative; max-width:1200px; margin:0 auto; padding:0 20px; text-align:center;}
+.cert-hero h6{color:#fff; font-size:22px; font-weight:600; line-height:1.6;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .cert-hero{padding:80px 0;}
+
+  .cert-hero h6{font-size:16px;}
+}
+
+.cert-section{padding:120px 0;}
+.cert-section .inner{max-width: 1280px;margin:0 auto;padding: 0 10px;}
+.cert-desc{margin-bottom:60px; color:#fff; font-size:20px; font-weight:600; text-align:center;}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.cert-grid li{display:flex;padding: 8px;background:#fff;align-items:center;justify-content:center;}
+.cert-grid img{max-width:100%;height:auto;min-height: 303px;}
+.cert-divider{margin-top:80px; border:0; border-top:1px solid #363636;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .cert-section{padding-top:3%;padding-bottom:3%;}
+  .cert-grid{grid-template-columns:repeat(2,1fr);}
+
+  .cert-desc{font-size:16px;}
+  .cert-grid img{min-height:unset;}
+}
+
+
+.cert-hero{position:relative; padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/b9467af90e355.png") center/cover no-repeat;}
+/* 어두운 오버레이 */
+.cert-hero::before{position:absolute; background:rgba(0,0,0,.35); content:""; inset:0;}
+.cert-hero .inner{position:relative; max-width:1200px; margin:0 auto; padding:0 20px; text-align:center;}
+.cert-hero h6{color:#fff; font-size:22px; font-weight:600; line-height:1.6;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .cert-hero{padding:80px 0;}
+
+  .cert-hero h6{font-size:16px;}
+}
