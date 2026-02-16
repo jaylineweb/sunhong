@@ -261,3 +261,27 @@
 
   .cert-hero h6{font-size:16px;}
 }
+
+
+.contact-intro{padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/5714e9e6fe32c.jpg") center/cover no-repeat;}
+.contact-intro .inner{max-width:1200px; margin:0 auto; padding:0 20px; text-align:center;}
+.contact-intro p{color:#fff; font-size:20px; font-weight:600; line-height:1.6;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .contact-intro{padding:80px 0;}
+  .contact-intro p{font-size:16px;}
+}
+
+.contact-form{padding:100px 0;}
+.contact-form .inner{max-width: 1280px;margin:0 auto;padding:0 20px;}
+.contact-form .field{margin-bottom:20px;}
+.contact-form label{display:block;margin-bottom:6px;font-size: 1em;font-weight: 500;color: #333;}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius: 0;font-size:16px;border-width:0;border-bottom-width:1px;}
+.contact-form input{}
+.contact-form textarea{resize:vertical;}
+.contact-form .privacy{margin:30px 0;}
+.contact-form button{width:100%; padding:15px; border:0; background:#000; color:#fff; font-size:18px; cursor:pointer;}
+.contact-form button:hover{opacity:.85;}
+
+.contact-form .form-control{overflow-y:auto;height:160px;padding:10px;font-size:16px;border:1px solid #ccc;border-width:1px;border-radius:0;}
