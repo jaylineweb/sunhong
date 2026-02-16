@@ -35,6 +35,8 @@
 
 /* 모바일 */
 @media (max-width:768px){
+  .history{padding-top:5%;}
+  .history-title{margin-bottom:5%;font-size:2rem;}
   .history-row{flex-direction:column;}
 
   .history-group{margin-bottom:60px;}
