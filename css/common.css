@@ -96,8 +96,8 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 .site-footer__contact a{display:flex; font-weight:600; align-items:center; gap:6px;}
 
 /* 문의 버튼 */
-.site-footer__cta{margin-top:10px; padding:8px 16px; border:2px solid #f8831a; border-radius:6px; color:#f8831a !important; transition:.2s;}
-.site-footer__cta:hover{background:#f8831a; color:#fff !important;}
+.site-footer__cta{margin-top:10px; padding:8px 16px; border:2px solid #ed0f0f; border-radius:6px; color:#ed0f0f !important; transition:.2s;}
+.site-footer__cta:hover{background:#ed0f0f; color:#fff !important;}
 
 /* ========== media query: site-footer ========== */
 @media (max-width:1280px){

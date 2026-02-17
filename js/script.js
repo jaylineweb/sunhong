@@ -185,3 +185,18 @@ if (carousel) {
     else if (diff < -threshold) prevSlide();
   });
 }
+
+const rows = document.querySelectorAll('.process-row');
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+  });
+},{ threshold: 0.3 });
+
+rows.forEach(row=>{
+  observer.observe(row);
+});
+
