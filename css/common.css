@@ -20,8 +20,8 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 .depth2 li a:hover{background:#f5f5f5;}
 
 /* Button */
-.btn-primary{position:relative;min-width: 120px;padding: 8px 20px;border-color:#d3d3d3;border-radius:6px;background-color:#f8831a;color:#fff;font-size: 19px;font-family: 'NotoSansKR';font-weight: 600;}
-.btn-primary:hover{background:#ed0f0f;}
+.btn-primary{position:relative;min-width: 120px;padding: 8px 20px;border-color:#d3d3d3;border-radius:6px;background-color:#ed0f0f;color:#fff;font-size: 19px;font-family: 'NotoSansKR';font-weight: 600;}
+.btn-primary:hover{background:#c30d0d;}
 
 /* Language */
 .language{position:relative;}
