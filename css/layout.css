@@ -167,7 +167,7 @@ html{}
 /* ========== rowgroup4 (products) ========== */
 .products{display:flex;width:100%;max-width:1920px;margin:0 auto;padding:120px 0;flex-direction:column;align-items:center;background-color: #fafaf7;}
 .products__header{margin-bottom: 93px;text-align:center;}
-.products__title{margin-bottom:36px; font-size:42px; font-weight:700; font-family:'Noto Sans KR',sans-serif; color:#f8831a; line-height:1.2;}
+.products__title{margin-bottom:36px; font-size:42px; font-weight:700; font-family:'Noto Sans KR',sans-serif; color:#ed0f0f; line-height:1.2;}
 .products__subtitle{font-size:20px;font-family: 'NotoSansKR';font-weight: 500;}
 
 /* list */
@@ -215,7 +215,7 @@ html{}
 /* OUR PARTNERS 타이틀 영역 */
 .rowgroup5{padding:120px 0;}
 .partners-title{width:100%; padding:20px 0 34px;}
-.partners-title__heading{margin:0; color:#f8831a; font-size:42px; font-weight:600; font-family:"Noto Sans", sans-serif; text-align:center; line-height:1.2;}
+.partners-title__heading{margin:0; color:#ed0f0f; font-size:42px; font-weight:600; font-family:"Noto Sans", sans-serif; text-align:center; line-height:1.2;}
 .partners_desc{margin-top:1.3rem;font-size:20px;font-family:"NotoSansKR";font-weight:400;color:#000;line-height:24px;word-wrap:break-word;text-align:center;}
 .logo-marquee{overflow:hidden; width:100%; padding:40px 0; background:#fff;}
 .logo-marquee__viewport{display:flex; width:max-content; animation:marquee-left 30s linear infinite;}
