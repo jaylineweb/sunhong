@@ -14,7 +14,7 @@
 
 .brand-story{padding:80px 20px;}
 .brand-why{max-width:900px; margin:0 auto; text-align:center;}
-.brand-title{margin-bottom:30px; color:#f27f1d; font-size:28px; font-weight:700;}
+.brand-title{margin-bottom:30px; color:#ed0f0f; font-size:28px; font-weight:700;}
 .brand-logo img{display:block; width:auto; height:212px; margin:0 auto 40px;}
 .brand-desc p{margin:0; color:#221e1f; font-size:20px; line-height:1.7;}
 .brand-desc .gap{height:20px;}
@@ -24,7 +24,7 @@
 .history{max-width: 1600px;margin:0 auto;padding: 132px 20px 100px;}
 .history-title{margin-bottom: 128px;color: #ed0f0f;font-size: 48px;font-weight: 900;text-align:center;}
 .history-group{margin-bottom:80px;}
-.history-year{margin-bottom:40px; color:#f27f1d; font-size:22px; text-align:center;}
+.history-year{margin-bottom:40px; color:#ed0f0f; font-size:22px; text-align:center;}
 .history-row{display:flex; gap:40px; align-items:center;}
 
 .history-image,
@@ -45,7 +45,7 @@
 
 
 .brand-film{max-width:1000px; margin:0 auto; padding:100px 20px; text-align:center;}
-.section-title{margin-bottom:40px; color:#f27f1d; font-size:32px; font-weight:700;}
+.section-title{margin-bottom:40px; color:#ed0f0f; font-size:32px; font-weight:700;}
 /* 영상 반응형 */
 .film-video{position:relative; margin-bottom:24px; padding-top:56.25%;}
 .film-video iframe{position:absolute; width:100%; height:100%; inset:0;}
@@ -60,8 +60,8 @@
 .video-card strong{display:block; color:#333; font-size:16px;}
 .video-card span{display:block; margin-top:4px; color:#999; font-size:14px;}
 .youtube-link{margin-top:48px; text-align:center;}
-.youtube-link a{display:inline-block; padding:12px 32px; border:1px solid #f27f1d; border-radius:40px; color:#f27f1d; text-decoration:none; transition:.2s;}
-.youtube-link a:hover{background:#f27f1d; color:#fff;}
+.youtube-link a{display:inline-block; padding:12px 32px; border:1px solid #ed0f0f; border-radius:40px; color:#ed0f0f; text-decoration:none; transition:.2s;}
+.youtube-link a:hover{background:#ed0f0f; color:#fff;}
 
 /* 모바일 */
 @media (max-width:768px){
@@ -69,7 +69,7 @@
 }
 
 .news-room{max-width:1200px; margin:0 auto; padding:80px 20px;}
-.section-title{margin-bottom:60px; color:#f27f1d; text-align:center;}
+.section-title{margin-bottom:60px; color:#ed0f0f; text-align:center;}
 .news-top{display:grid; margin-bottom:60px; grid-template-columns:1fr 1fr; gap:40px;}
 .news-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:40px;}
 .news-card a{display:block; color:inherit; text-decoration:none; transition:.3s;}
@@ -79,7 +79,7 @@
 .meta{display:block; margin-bottom:10px; color:#999; font-size:14px;}
 .news-card h3{font-size:22px; line-height:1.4;}
 .news-card p{margin-top:12px; color:#777; font-size:14px;}
-.point{color:#f27f1d;}
+.point{color:#ed0f0f;}
 .news-card:hover{transform:translateY(-6px);}
 
 /* 반응형 */
@@ -113,7 +113,7 @@
 .partner-card img{display:block; width:100%; height:300px; object-fit:cover;}
 .partner-card h3{margin-top:20px; color:#333; font-size:18px;}
 .partner-card p{margin-top:6px; color:#919191; font-size:14px;}
-.partner-btn{display:inline-block; margin-top:16px; color:#f27f1d; font-size:14px; font-weight:600; text-decoration:none;}
+.partner-btn{display:inline-block; margin-top:16px; color:#ed0f0f; font-size:14px; font-weight:600; text-decoration:none;}
 .partner-btn:hover{opacity:0.7;}
 
 /* 모바일 */
