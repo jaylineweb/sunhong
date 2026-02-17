@@ -386,7 +386,7 @@
 /* =========================
    PROCESS SECTION
 ========================= */
-.process{width:100%; margin:0 auto; padding:120px 0;}
+.process{width:100%; margin:0 auto; padding:120px 0 0;}
 /* row */
 .process .process-row{display:grid; grid-template-columns:1fr 1fr; align-items:center;}
 
