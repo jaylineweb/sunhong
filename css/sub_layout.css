@@ -4,7 +4,7 @@
 .sub-nav__list{display:flex; justify-content:center; gap:40px;}
 .sub-nav__list a{padding-bottom:6px; color:#666; font-size:16px; transition:.2s;}
 .sub-nav__list a:hover{color:#000;}
-.sub-nav__list .is-active a{border-bottom:2px solid #f8831a; color:#000; font-weight:600;}
+.sub-nav__list .is-active a{border-bottom:2px solid #ed0f0f; color:#000; font-weight:600;}
 
 /* 모바일 */
 @media(max-width:768px){
@@ -18,7 +18,7 @@
 .brand-logo img{display:block; width:auto; height:212px; margin:0 auto 40px;}
 .brand-desc p{margin:0; color:#221e1f; font-size:20px; line-height:1.7;}
 .brand-desc .gap{height:20px;}
-.highlight{color:#f8831a;}
+.highlight{color:#ed0f0f;}
 
 
 .history{max-width: 1600px;margin:0 auto;padding: 132px 20px 100px;}
@@ -126,7 +126,7 @@
 
 .yemat-map-section{padding:120px 0;}
 .yemat-map-section .inner{max-width:1200px; margin:0 auto; padding:0 20px;}
-.map-title{margin-bottom:40px; color:#f8831a; font-size:42px; text-align:center;}
+.map-title{margin-bottom:40px; color:#ed0f0f; font-size:42px; text-align:center;}
 .map-wrap{display:grid; grid-template-columns:1fr 360px; gap:40px;}
 #daumRoughmapContainer1771079586917{width:100%; height:auto;}
 .map-info{display:flex; flex-direction:column; justify-content:center;}
