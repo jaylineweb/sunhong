@@ -286,10 +286,11 @@
 }
 
 .autograph{}
-.autograph .autograph_text{font-size:40px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
-
+.autograph .autograph_text{position:relative;font-size:40px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
+.autograph_img{position:absolute;top: -17px;right: -20px;width: 117px;height:auto;max-width:none;max-height:none;object-fit:contain;}
 @media all and (max-width:768px){
   .autograph .autograph_text{font-size:1.2rem;}
+  .autograph_img {width:85px;}
 }
 
 .cert-hero{position:relative; padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/b9467af90e355.png") center/cover no-repeat;}
