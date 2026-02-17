@@ -406,7 +406,8 @@
    MOBILE
 ========================= */
 @media (max-width:768px){
-  .process .process-row{grid-template-columns:1fr; gap:32px;}
+  .process{padding:5% 0;}
+  .process .process-row{grid-template-columns:1fr; gap:32px; margin-bottom:5%;}
   .process .process-row .img img{height:320px;}
   .process .process-row .txt{text-align:left;}
 }
