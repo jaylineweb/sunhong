@@ -12,7 +12,7 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 .gnb-list{display:flex;list-style:none;gap: 42px;align-items:center;}
 .gnb-item{position:relative;}
 .gnb-link{display:block;padding:8px 0;color:#333;font-size: 19px;font-family: 'NotoSansKR';font-weight: 700;}
-.gnb-link:hover{color:#f97316;}
+.gnb-link:hover{color:#ed0f0f;}
 
 /* depth2 */
 .depth2{display:none; position:absolute; top:100%; left:0; min-width:180px; border:1px solid #eee; background:#fff; list-style:none;}
@@ -67,7 +67,7 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
     .logo a{display:inline-block;}
     .logo img{height: 53px;}
     .gnb .gnb-list{display:none;}
-    .gnb .문의사항 .btn-primary{min-width: unset;padding: 8px 11px;background:#fff;color:#f97316;border:2px solid #f97316;font-size: 15px;}
+    .gnb .문의사항 .btn-primary{min-width: unset;padding: 8px 11px;background:#fff;color:#ed0f0f;border:2px solid #ed0f0f;font-size: 15px;}
     .gnb .문의사항 .btn-primary:hover{background:#fff5ee;}
     .gnb-mobile .gnb-item.open > .depth2{position:static;border-left-width:0;border-right-width:0;border-bottom-width:0;}
     .language{display:none;}
