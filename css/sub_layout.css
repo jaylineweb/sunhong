@@ -285,6 +285,13 @@
   .greeting-text p{margin-bottom:24px; font-size:18px;}
 }
 
+.autograph{}
+.autograph .autograph_text{font-size:40px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
+
+@media all and (max-width:768px){
+  .autograph .autograph_text{font-size:1.2rem;}
+}
+
 .cert-hero{position:relative; padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/b9467af90e355.png") center/cover no-repeat;}
 /* 어두운 오버레이 */
 .cert-hero::before{position:absolute; background:rgba(0,0,0,.35); content:""; inset:0;}
