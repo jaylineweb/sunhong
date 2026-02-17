@@ -286,8 +286,8 @@
 
 .autograph{}
 .autograph .inner{width:1024px;margin:0 auto;}
-.autograph .autograph_text{position:relative;font-size:40px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
-.autograph_img{position:absolute;top: -17px;right: -20px;width: 117px;height:auto;max-width:none;max-height:none;object-fit:contain;}
+.autograph .autograph_text{position:relative;font-size: 25px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
+.autograph_img{position:absolute;top: -17px;right: -20px;width: 90px;height:auto;max-width:none;max-height:none;object-fit:contain;}
 @media all and (max-width:1024px){
   .autograph .inner{width:100%;}
 }
