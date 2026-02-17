@@ -80,7 +80,7 @@ html{}
 /* 단일 카드 */
 .export_stats__card{display:flex; width:398px; height:198px; border-radius:8px; background:#ffffff; flex-direction:column;align-items:center;justify-content:center;gap:10px;}
 /* 숫자 */
-.export_stats__number{color:#f27f1d;font-size:64px;font-family: 'NotoSansKR';font-weight:700;line-height:1;}
+.export_stats__number{color:#ed0f0f;font-size:64px;font-family: 'NotoSansKR';font-weight:700;line-height:1;}
 /* 설명 */
 .export_stats__label{color:#333; font-size:18px; font-weight:600;}
 
@@ -180,7 +180,7 @@ html{}
 .products__name{font-size:15px;font-family: 'NotoSansKR';font-weight: 500;text-align: center;}
 /* more */
 .products__more{margin-top: 94px;}
-.products__more-btn{display:inline-flex;align-items:center;justify-content:center;border:solid 1px #f27f1d;padding:8px 16px;font-size:18px;font-family: 'NotoSansKR';font-weight:600;letter-spacing:-0.025em;border-radius:4px;transition:background-color 0.3s ease;outline:0;text-decoration:none;background-color:#f27f1d;color:#ffffff;}
+.products__more-btn{display:inline-flex;align-items:center;justify-content:center;border:solid 1px #ed0f0f;padding:8px 16px;font-size:18px;font-family: 'NotoSansKR';font-weight:600;letter-spacing:-0.025em;border-radius:4px;transition:background-color 0.3s ease;outline:0;text-decoration:none;background-color:#ed0f0f;color:#ffffff;}
 
 /* ========== media query: rowgroup4 (products) ========== */
 @media (max-width:1280px){
