@@ -246,12 +246,13 @@
 }
 
 
-.greeting{padding:120px 0;font-size: 0;line-height: 0;}
-.greeting-inner{position: relative;max-width: 1568px;margin:0 auto;padding:0 20px;}
-.greeting-inner:before{display:block;position:absolute;top:56px;right:-158px;width:800px;height:943px;background-image:url(../images/sub/greeting.png);background-repeat:no-repeat;background-size:cover;background-position:center;z-index:17;content:'';}
-.greeting-text h2{margin-bottom:143px;font-size: 49.385px;font-family: "Pretendard";font-weight: 600;line-height: 1.2;}
-.greeting-text p{margin-bottom: 65px;color:#222;font-size: 41px;line-height: 1.2;letter-spacing: -0.025em;}
-.greeting-image img{display:block;width:100%;max-width: 800px;margin-left:auto;}
+.greeting{padding:120px 0;}
+.greeting-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap: 0;max-width: 1024px;margin:0 auto;padding:0 20px;}
+.greeting-inner:before{display:none;}
+.greeting-text h2{margin-bottom: 50px;font-size: 40px;font-family: "Pretendard";font-weight: 600;line-height: 1.2;}
+.greeting-text p{margin-bottom: 35px;color:#222;font-size: 24px;line-height: 1.2;letter-spacing: -0.025em;}
+.greeting-image{min-width:0;}
+.greeting-image img{display:block;width:100%;max-width: 482px;margin-left:auto;}
 
 /* 모바일 */
 /* @media(max-width:768px){
@@ -263,33 +264,36 @@
 /* ========== media query: greeting (반응형) ========== */
 @media (max-width:1280px){
   .greeting{padding:80px 0;}
-  .greeting-inner{padding:0 24px;}
-  .greeting-inner:before{top:40px;right: 0;width: 376px;height: 507px;background-size:contain;}
+  .greeting-inner{grid-template-columns:1fr; padding:0 24px;}
+  .greeting-inner:before{display:none;}
   .greeting-text h2{margin-bottom:80px; font-size:40px;}
   .greeting-text p{margin-bottom: 30px;font-size: 27px;}
-  .greeting-image img{max-width:100%;}
+  .greeting-image img{max-width:100%; margin:0 auto;}
 }
 @media (max-width:768px){
   .greeting{padding:60px 0;}
-  .greeting-inner{padding:0 16px;}
-  .greeting-inner:before{position: static;width:320px;height:377px;background-size:contain;opacity:0.6;margin: 0 auto;}
+  .greeting-inner{grid-template-columns:1fr; padding:0 16px;}
   .greeting-text h2{margin-bottom:48px; font-size:28px;}
   .greeting-text p{margin-bottom:32px; font-size:22px;}
-  .greeting-image img{max-width:100%; margin-left:0; margin-right:auto;}
+  .greeting-image img{max-width:60%; margin:0 auto;}
 }
 @media (max-width:480px){
   .greeting{padding:40px 0;}
-  .greeting-inner{padding:0 12px;}
-  .greeting-inner:before{top:16px; right:-20px; width:220px; height:259px; background-size:contain; opacity:0.5;}
+  .greeting-inner{grid-template-columns:1fr; padding:0 12px;}
   .greeting-text h2{margin-bottom:32px; font-size:24px;}
   .greeting-text p{margin-bottom:24px; font-size:18px;}
 }
 
 .autograph{}
+.autograph .inner{width:1024px;margin:0 auto;}
 .autograph .autograph_text{position:relative;font-size:40px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
 .autograph_img{position:absolute;top: -17px;right: -20px;width: 117px;height:auto;max-width:none;max-height:none;object-fit:contain;}
+@media all and (max-width:1024px){
+  .autograph .inner{width:100%;}
+}
 @media all and (max-width:768px){
-  .autograph .autograph_text{font-size:1.2rem;}
+  .autograph{padding:0 7%;}
+  .autograph .autograph_text{margin-top:5%;font-size:1rem;}
   .autograph_img {width:85px;}
 }
 
