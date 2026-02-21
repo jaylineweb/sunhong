@@ -70,6 +70,162 @@ if (lang && langBtn) {
   });
 }
 
+// Factory process carousel (vanilla JS) – drag & swipe 지원
+(function () {
+  const MARGIN = 10;
+  const BREAKPOINT = 768;
+  const DRAG_THRESHOLD = 50;
+
+  const carouselEl = document.querySelector('.factory-process-carousel');
+  const trackEl = document.querySelector('.factory-process-carousel__track');
+  if (!carouselEl || !trackEl) return;
+
+  const items = trackEl.querySelectorAll('.factory-process-carousel__item');
+  if (!items.length) return;
+
+  let currentIndex = 0;
+  let perView = 2;
+  let itemWidth = 0;
+  let isDragging = false;
+  let dragStartX = 0;
+  let baseOffset = 0;
+
+  function getPerView() {
+    return window.innerWidth >= BREAKPOINT ? 2 : 1;
+  }
+
+  function updateLayout() {
+    perView = getPerView();
+    const viewportWidth = carouselEl.offsetWidth;
+    itemWidth = (viewportWidth - MARGIN * (perView - 1)) / perView;
+    const trackWidth = items.length * itemWidth + MARGIN * (items.length - 1);
+
+    trackEl.style.display = 'flex';
+    trackEl.style.gap = MARGIN + 'px';
+    trackEl.style.width = trackWidth + 'px';
+    trackEl.style.transition = 'transform 0.3s ease';
+    items.forEach(function (item) {
+      item.style.flexShrink = '0';
+      item.style.width = itemWidth + 'px';
+    });
+    goTo(currentIndex);
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, items.length - perView);
+  }
+
+  function goTo(index) {
+    const maxIdx = getMaxIndex();
+    currentIndex = Math.max(0, Math.min(index, maxIdx));
+    const offset = currentIndex * (itemWidth + MARGIN);
+    trackEl.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
+  }
+
+  function next() {
+    const maxIdx = getMaxIndex();
+    if (currentIndex >= maxIdx) {
+      goTo(0);
+    } else {
+      goTo(currentIndex + 1);
+    }
+  }
+
+  function prev() {
+    const maxIdx = getMaxIndex();
+    if (currentIndex <= 0) {
+      goTo(maxIdx);
+    } else {
+      goTo(currentIndex - 1);
+    }
+  }
+
+  function startDrag(clientX) {
+    if (isDragging) return;
+    isDragging = true;
+    dragStartX = clientX;
+    baseOffset = currentIndex * (itemWidth + MARGIN);
+    trackEl.style.transition = 'none';
+    carouselEl.classList.add('is-dragging');
+  }
+
+  function moveDrag(clientX) {
+    if (!isDragging || !itemWidth) return;
+    const dragOffset = clientX - dragStartX;
+    const x = baseOffset - dragOffset;
+    trackEl.style.transform = 'translate3d(-' + x + 'px, 0, 0)';
+  }
+
+  function endDrag(clientX) {
+    if (!isDragging) return;
+    const dragOffset = clientX - dragStartX;
+    trackEl.style.transition = 'transform 0.3s ease';
+    carouselEl.classList.remove('is-dragging');
+    if (dragOffset > DRAG_THRESHOLD) {
+      prev();
+    } else if (dragOffset < -DRAG_THRESHOLD) {
+      next();
+    } else {
+      goTo(currentIndex);
+    }
+    isDragging = false;
+  }
+
+  // 터치 스와이프
+  carouselEl.addEventListener('touchstart', function (e) {
+    startDrag(e.changedTouches[0].clientX);
+  }, { passive: true });
+
+  carouselEl.addEventListener('touchmove', function (e) {
+    moveDrag(e.changedTouches[0].clientX);
+  }, { passive: true });
+
+  carouselEl.addEventListener('touchend', function (e) {
+    endDrag(e.changedTouches[0].clientX);
+  }, { passive: true });
+
+  // 마우스 드래그
+  function onMouseMove(e) {
+    moveDrag(e.clientX);
+  }
+  function onMouseUp(e) {
+    endDrag(e.clientX);
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+  }
+  carouselEl.addEventListener('mousedown', function (e) {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    startDrag(e.clientX);
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  });
+
+  // Nav buttons
+  const nav = document.createElement('div');
+  nav.className = 'factory-process-carousel__nav';
+  nav.setAttribute('aria-label', '캐러셀 이전/다음');
+  const btnPrev = document.createElement('button');
+  btnPrev.type = 'button';
+  btnPrev.className = 'factory-process-carousel__nav-prev';
+  btnPrev.setAttribute('aria-label', '이전');
+  btnPrev.innerHTML = '&#10094;';
+  const btnNext = document.createElement('button');
+  btnNext.type = 'button';
+  btnNext.className = 'factory-process-carousel__nav-next';
+  btnNext.setAttribute('aria-label', '다음');
+  btnNext.innerHTML = '&#10095;';
+  nav.appendChild(btnPrev);
+  nav.appendChild(btnNext);
+  carouselEl.appendChild(nav);
+
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
+
+  updateLayout();
+  window.addEventListener('resize', updateLayout);
+})();
+
 // Carousel (Owl Carousel 스타일 옵션 참고)
 const carousel = document.querySelector('.carousel');
 const carouselConfig = {
@@ -77,15 +233,16 @@ const carouselConfig = {
   items: 1,
   nav: false,
   dots: true,
-  mouseDrag: false,              // 기본: 마우스 드래그 끔
-  touchDrag: true,               // 기본: 터치 스와이프 켜짐
+  swipe: true,                   // 터치/마우스 스와이프(드래그) 일괄 on/off
+  mouseDrag: true,
+  touchDrag: true,
   autoplay: true,
   autoplaySpeed: 5000,
   dragThreshold: 50,
   responsive: {
-    0:   { mouseDrag: true, touchDrag: true },
-    640: { mouseDrag: true, touchDrag: true },
-    1000: { mouseDrag: true, touchDrag: true }
+    0:   { swipe: true },
+    640: { swipe: true },
+    1000: { swipe: true }
   }
 };
 
@@ -131,10 +288,14 @@ if (carousel) {
   }
 
   function isTouchDragEnabled() {
+    const swipe = getResponsiveOption('swipe');
+    if (swipe !== undefined) return swipe;
     return getResponsiveOption('touchDrag');
   }
 
   function isMouseDragEnabled() {
+    const swipe = getResponsiveOption('swipe');
+    if (swipe !== undefined) return swipe;
     return getResponsiveOption('mouseDrag');
   }
 
@@ -199,4 +360,5 @@ const observer = new IntersectionObserver((entries)=>{
 rows.forEach(row=>{
   observer.observe(row);
 });
+
 

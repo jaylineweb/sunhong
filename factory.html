@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선홍수산 | 생산 시스템</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/sub.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <!-- 모바일 메뉴 버튼 -->
+                <button type="button" class="btn-menu" aria-label="메뉴 열기" aria-expanded="false">
+                    <span class="ham"><span></span><span></span><span></span></span>
+                </button>
+                <!-- Logo -->
+                <h1 class="logo">
+                    <a href="/">
+                        <img src="./images/common/logo.png" alt="예맛 YEMAT">
+                    </a>
+                </h1>
+                <!-- GNB (데스크톱) -->
+                <nav class="gnb">
+                    <ul class="gnb-list">
+                        <li class="gnb-item has-dropdown">
+                            <a href="/greeting" class="gnb-link">회사소개</a>
+                            <ul class="depth2">
+                                <li><a href="/greeting.html">인사말</a></li>
+                                <li><a href="/about.html">회사연혁</a></li>
+                                <li><a href="/pr_video.html">홍보영상</a></li>
+                                <li><a href="/news.html">보도자료</a></li>
+                                <li><a href="/family.html">관계사 소개</a></li>
+                                <li><a href="/location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item has-dropdown">
+                            <a href="/value.html" class="gnb-link">품질 경영</a>
+                            <ul class="depth2">
+                                <li><a href="/value.html">품질 시스템</a></li>
+                                <li><a href="/factory.html">생산시스템</a></li>
+                                <li><a href="/certificate.html">품질검사 및 인증</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item has-dropdown">
+                            <a href="/17" class="gnb-link">제품소개</a>
+                            <ul class="depth2">
+                                <li><a href="/product">제품소개</a></li>
+                                <li><a href="/partner">주요 고객사</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item">
+                            <a href="/recruit" class="gnb-link">인재채용</a>
+                        </li>
+                    </ul>
+                    <div class="gnb_contact">
+                        <a href="/contact" class="btn-primary">문의하기</a>
+                    </div>
+                </nav>
+                <!-- Language -->
+                <div class="language">
+                    <div class="language-inner">
+                        <span class="taegukgi-icon">
+                            <img src="./common/img/flag_shapes/flag_kr_circle.png" alt="택스기">
+                        </span>
+                        <button class="lang-btn">
+                            KR ▾
+                        </button>
+                    </div>
+                    <ul class="lang-dropdown">
+                        <li><a href="/">KR</a></li>
+                        <li><a href="http://cn.yemat.com">CN</a></li>
+                        <li><a href="http://jp.yemat.com">JP</a></li>
+                        <li><a href="http://en.yemat.com">EN</a></li>
+                    </ul>
+                </div>
+
+                <!-- 모바일 메뉴 오버레이 -->
+                <div class="gnb-overlay" aria-hidden="true"></div>
+                <!-- 모바일 메뉴 닫기 (GNB 우측 바깥) -->
+                <button type="button" class="btn-close" aria-label="메뉴 닫기">×</button>
+                <!-- 모바일 메뉴 드로어 -->
+                <div class="gnb-drawer">
+                    <nav class="gnb-mobile">
+                        <ul class="gnb-list">
+                            <li class="gnb-item has-dropdown">
+                                <a href="/about" class="gnb-link">회사소개<span class="arrow" aria-hidden="true"></span></a>
+                                <ul class="depth2">
+                                    <li><a href="/greeting.html">인사말</a></li>
+                                    <li><a href="/about.html">회사연혁</a></li>
+                                    <li><a href="/pr_video.html">홍보영상</a></li>
+                                    <li><a href="/news.html">보도자료</a></li>
+                                    <li><a href="/family.html">관계사 소개</a></li>
+                                    <li><a href="/location.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li class="gnb-item has-dropdown">
+                                <a href="/value" class="gnb-link">품질 경영<span class="arrow" aria-hidden="true"></span></a>
+                                <ul class="depth2">
+                                    <li><a href="/value">품질 시스템</a></li>
+                                    <li><a href="/factory">생산 시스템</a></li>
+                                    <li><a href="/certificate">품질검사 및 인증</a></li>
+                                </ul>
+                            </li>
+                            <li class="gnb-item has-dropdown">
+                                <a href="/product" class="gnb-link">제품소개<span class="arrow" aria-hidden="true"></span></a>
+                                <ul class="depth2">
+                                    <li><a href="/product">제품소개</a></li>
+                                    <li><a href="/partner">주요 고객사</a></li>
+                                </ul>
+                            </li>
+                            <li class="gnb-item">
+                                <a href="/recruit" class="gnb-link">인재채용</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+        <main class="main">
+            <nav class="sub-nav">
+                <ul class="sub-nav__list">
+                    <li><a href="/value.html">품질 시스템</a></li>
+                    <li class="is-active"><a href="/factory.html">생산 시스템</a></li>
+                    <li><a href="/certificate.html">품질검사 및 인증</a></li>
+                </ul>
+            </nav>
+            <section class="production-highlight">
+                <div class="production-highlight__inner">
+                    <h3>
+                        예맛은 세계 최대 규모의 김 생산 시스템을 갖추고 있습니다.<br>
+                        원초 이물질 선별기, 금속 검출기 등을 활용해 믿을 수 있는 품질의 김을 생산합니다.
+                    </h3>
+                </div>
+            </section>
+            <section class="factory-process">
+                <div class="factory-process__inner">
+                    <h2 class="factory-process__title">생산 프로세스</h2>
+                    <ol class="factory-process-steps" aria-label="생산 프로세스 단계">
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/48c42db51594a.png" alt="원초 선별" loading="lazy">
+                                <figcaption class="factory-process-step__title">원초 선별</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/e707174515c5f.png" alt="원초 금속 검출" loading="lazy">
+                                <figcaption class="factory-process-step__title">원초 금속 검출</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/6d2dc6daf4236.png" alt="원초 이물 선별" loading="lazy">
+                                <figcaption class="factory-process-step__title">원초 이물 선별</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/6b4198f8d6efb.png" alt="원초 육안 선별" loading="lazy">
+                                <figcaption class="factory-process-step__title">원초 육안 선별</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/cc0792e022a99.png" alt="1차 구이" loading="lazy">
+                                <figcaption class="factory-process-step__title">1차 구이</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/a762ea9d58fb2.png" alt="소금, 기름 투입" loading="lazy">
+                                <figcaption class="factory-process-step__title">소금, 기름 투입</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/f8918e04d9d04.png" alt="2차 구이" loading="lazy">
+                                <figcaption class="factory-process-step__title">2차 구이</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/63c0468d76b80.png" alt="계수" loading="lazy">
+                                <figcaption class="factory-process-step__title">계수</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/06eae63ffb0fd.png" alt="절단" loading="lazy">
+                                <figcaption class="factory-process-step__title">절단</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/c44cf89d8a07d.png" alt="1차 포장" loading="lazy">
+                                <figcaption class="factory-process-step__title">1차 포장</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/88d490f0a5502.png" alt="금속 검출" loading="lazy">
+                                <figcaption class="factory-process-step__title">금속 검출</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/bf7b94f3d9975.png" alt="중량 검사" loading="lazy">
+                                <figcaption class="factory-process-step__title">중량 검사</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/20d15b5bc9107.png" alt="2차 포장" loading="lazy">
+                                <figcaption class="factory-process-step__title">2차 포장</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="factory-process-step">
+                            <figure class="factory-process-step__card">
+                                <img src="https://cdn.imweb.me/thumbnail/20251021/1842c83f4e7d5.png" alt="박스 포장" loading="lazy">
+                                <figcaption class="factory-process-step__title">박스 포장</figcaption>
+                            </figure>
+                        </li>
+                    </ol>
+
+                    <div class="factory-process__spacer" aria-hidden="true"></div>
+
+                    <!-- 하단: 캐러셀 -->
+                    <div class="factory-process-carousel" aria-label="생산 시설 이미지">
+                        <div class="factory-process-carousel__track">
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/76915aa800981.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/1537fd4fd0668.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/62a083fdde7e9.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/16fb19d9704fe.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/f26ce87192002.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/0ef1d36a7b681.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/334e62bd2a259.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/05c6e8c5f551f.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/9f1b8df4f7604.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/ad8923a37f696.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/c252ac1c8dd53.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/371e18ee42838.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/98259ec6b0224.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/a83e0c416cbfe.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/1b5208796c227.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/db4d6b3a5af41.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/4396999f03918.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/97f62a453268f.jpg" alt="" loading="lazy"></div>
+                            <div class="factory-process-carousel__item"><img src="https://cdn.imweb.me/thumbnail/20251015/a80ab4665ecc0.jpg" alt="" loading="lazy"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <footer class="site-footer">
+            <div class="site-footer__inner">
+                <!-- 로고 -->
+                <div class="site-footer__logo">
+                    <img src="./images/common/footer_logo.png" alt="예맛">
+                </div>
+                <!-- 회사 정보 -->
+                <address class="site-footer__company">
+                    <p>주소: 경기도 이천시 마장면 서이천로 231번길 64</p>
+                    <p>사업자등록번호: 126-86-14912</p>
+                    <p>통신판매: 제 2023-서울송파-5809호</p>
+                    <p>개인정보관리책임자: 권윤택</p>
+                </address>
+                <!-- 사이트맵 -->
+                <nav class="site-footer__nav">
+                    <strong>사이트맵</strong>
+                    <ul>
+                        <li><a href="/about.html">회사소개</a></li>
+                        <li><a href="/value">핵심가치</a></li>
+                        <li><a href="/product">제품소개</a></li>
+                        <li><a href="/jobs">인재채용</a></li>
+                    </ul>
+                </nav>
+                <!-- 약관 -->
+                <div class="site-footer__policy">
+                    <a href="https://yemat.com/?mode=policy">이용약관</a>
+                    <a href="https://yemat.com/?mode=privacy"><strong>개인정보처리방침</strong></a>
+                </div>
+                <!-- 연락처 -->
+                <div class="site-footer__contact">
+                    <a href="mailto:sales@yemat1004.com">
+                        <img src="https://cdn.imweb.me/upload/S202402287f0c8739e1cc6/a627b60a5e4b9.png" alt="">
+                        sales@yemat1004.com
+                    </a>
+                    <a href="tel:07044847200">
+                        <img src="https://cdn.imweb.me/upload/S202402287f0c8739e1cc6/0061ce1c301c9.png" alt="">
+                        070-4484-7200
+                    </a>
+                    <a href="/contact" class="site-footer__cta">
+                        제안 · 협업 · 상품문의
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
