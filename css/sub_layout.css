@@ -379,7 +379,7 @@
 /* 내용 */
 .brand-visual .inner{position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:0 20px;}
 
-.brand-visual h2{color:#fff; font-size:20px; font-family:'Pretendard'; font-weight:600; line-height:1.8;}
+.brand-visual h2{color:#fff; font-size:24px; font-family:'Pretendard'; font-weight:600; line-height:1.8;}
 
 /* 모바일 */
 @media(max-width:768px){
