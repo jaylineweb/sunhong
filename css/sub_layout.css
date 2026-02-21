@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+.bg_inner{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.4);}
 @-webkit-keyframes slideInLeft {
   from {
     -webkit-transform: translate3d(-60%, 0, 0);
@@ -479,7 +480,7 @@
 }
 
 
-.factory-process{padding: 120px 20px 80px;background-color: #e8e6d966;}
+.factory-process{padding:80px 20px 80px;background-color:#e8e6d966;}
 .factory-process__inner{max-width:1200px; margin:0 auto;}
 .factory-process__title{margin:0 0 40px; color:#333; font-size:32px; font-weight:700; text-align:center;}
 .factory-process-steps{display:grid;margin:0;padding:0;list-style:none;grid-template-columns: repeat(7, 1fr);gap: 0px;}
