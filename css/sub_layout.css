@@ -519,25 +519,28 @@
 
 /* container */
 .recruit-container{max-width: 1246px;margin:0 auto;padding: 0;}
+.recruit-section--guide .recruit-container{max-width: 692px;}
+.recruit-section--welfare .recruit-container{max-width: 719px;}
 
 /* titles */
-.recruit-section__title{margin:0 0 28px;font-size: 48px;font-family: "Pretendard";font-weight: bold;line-height: 1.2;text-align: center;}
+.recruit-section__title{margin:0 0 28px;font-size: 22px;font-family: "Pretendard";font-weight: 600;line-height: 1.2;text-align: center;}
 .recruit-section__title--accent{color:#f8831a;}
 .recruit-section__title--white{color:#fff;}
-.recruit-section__desc{margin:14px 0 42px; text-align:center; line-height:1.7;}
+.recruit-section__desc{margin: 32px 0 42px;text-align:center;line-height:1.7;}
 
 /* hero */
 .recruit-hero{overflow:hidden; position:relative; padding:120px 0;}
-.recruit-hero__bg{position:absolute; background:url("https://cdn.imweb.me/thumbnail/20251015/1d03cefaf637e.jpg") center/cover no-repeat; inset:0;}
-.recruit-hero__overlay{position:absolute; background:rgba(0,0,0,.3); inset:0;}
+.recruit-hero__bg{position:absolute;inset:0;padding: 120px 0;background-image: url(../images/sub/value_top_img.png);background-position: 50% 0;background-size: cover;background-repeat: no-repeat;background-attachment: fixed;text-align: center;}
+.recruit-hero__overlay{position:absolute;background: rgba(0, 0, 0, 0.4);inset:0;}
 .recruit-hero__title{position:relative; margin:0; color:#fff; font-size:24px; font-weight:800; text-align:center;}
 
 /* section spacing */
 .recruit-section{padding:120px 0;}
 
 /* CTA button */
-.recruit-cta{display:flex; margin:10px 0 20px; justify-content:center;}
-.recruit-cta__btn{display:inline-flex; padding:14px 22px; border:1px solid rgba(0,0,0,.12); border-radius:999px; font-weight:800; text-decoration:none; align-items:center; gap:10px;}
+.recruit-cta{display:flex;margin: 0;justify-content:center;}
+.recruit-cta__btn{display:inline-flex;padding: 8px 16px;border: 1px solid #f8831a;border-radius:4px;font-size: 18px;font-weight: 600;color: #f8831a;text-decoration:none;align-items:center;gap:10px;background-color:transparent;transition:background-color 0.3s ease;}
+.recruit-cta__btn:hover{background-color:#F27F1D;color:#ffffff;}
 .recruit-cta__arrow{transition:transform .2s ease;}
 .recruit-cta__btn:hover .recruit-cta__arrow{transform:translateX(3px);}
 
