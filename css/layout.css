@@ -220,7 +220,7 @@ html{}
 .logo-marquee{overflow:hidden; width:100%; padding:40px 0; background:#fff;}
 .logo-marquee__viewport{display:flex; width:max-content; animation:marquee-left 30s linear infinite;}
 .logo-marquee__track{display:flex;align-items:center;gap: 40px;}
-.logo-marquee__item img{opacity:0.8; width:auto; height:60px; transition:opacity .3s ease; object-fit:contain;}
+.logo-marquee__item img{opacity:0.8; width:auto; height:180px; transition:opacity .3s ease; object-fit:contain;}
 .logo-marquee__item img:hover{opacity:1;}
 
 /* 핵심 */
