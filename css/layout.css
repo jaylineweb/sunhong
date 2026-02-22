@@ -225,8 +225,8 @@ html{}
 
 /* 핵심 */
 @keyframes marquee-left{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
 }
 
 /* ========== media query: rowgroup5 (partners) ========== */
@@ -237,7 +237,7 @@ html{}
     .partners_desc{font-size:18px; line-height:22px;}
     .logo-marquee{padding:32px 0;}
     .logo-marquee__track{gap:20px;}
-    .logo-marquee__item img{height:52px;}
+    .logo-marquee__item img{height:150px;}
 }
 @media (max-width:768px){
     .rowgroup5{padding:60px 16px;}
@@ -246,7 +246,6 @@ html{}
     .partners_desc{font-size:16px; margin-top:1rem; line-height:20px;}
     .logo-marquee{padding:24px 0;}
     .logo-marquee__track{gap:16px;}
-    .logo-marquee__item img{height:44px;}
 }
 @media (max-width:480px){
     .rowgroup5{padding:40px 12px;}
@@ -255,5 +254,5 @@ html{}
     .partners_desc{font-size:14px; line-height:18px;}
     .logo-marquee{padding:20px 0;}
     .logo-marquee__track{gap:12px;}
-    .logo-marquee__item img{height:36px;}
+    .logo-marquee__item img{height:100px;}
 }                
