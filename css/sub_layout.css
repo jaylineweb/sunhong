@@ -518,10 +518,10 @@
 }
 
 /* container */
-.recruit-container{max-width:1200px; margin:0 auto; padding:0 20px;}
+.recruit-container{max-width: 1246px;margin:0 auto;padding: 0;}
 
 /* titles */
-.recruit-section__title{margin:0 0 28px; font-size:22px; font-weight:800; text-align:center;}
+.recruit-section__title{margin:0 0 28px;font-size: 48px;font-family: "Pretendard";font-weight: bold;line-height: 1.2;text-align: center;}
 .recruit-section__title--accent{color:#f8831a;}
 .recruit-section__title--white{color:#fff;}
 .recruit-section__desc{margin:14px 0 42px; text-align:center; line-height:1.7;}
@@ -544,16 +544,17 @@
 /* media image blocks */
 .recruit-media{display:flex; margin:0; justify-content:center;}
 .recruit-media img{display:block; max-width:100%; height:auto;}
-.recruit-media--tall img{max-height:700px;/* 원본 높이 대응 */}
+.recruit-media--tall img{max-height: 1310px;/* 원본 높이 대응 */}
 
 /* talent section */
-.recruit-talent{overflow:hidden; position:relative; padding:120px 0;}
-.recruit-talent__bg{position:absolute; background:url("https://cdn.imweb.me/thumbnail/20251015/40270c30fc1dc.png") center/cover no-repeat; inset:0;}
-.recruit-cards{display:grid; position:relative; margin-top:32px; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px;}
-.recruit-card{padding:26px 18px; border-radius:16px; background:rgba(255,255,255,.15); color:#fff; text-align:center;}
-.recruit-card__icon{display:block; width:100px; height:auto; margin:0 auto 14px;}
-.recruit-card__title{margin:10px 0 10px; font-size:18px; font-weight:800;}
-.recruit-card__desc{margin:0; line-height:1.7;}
+.recruit-talent{overflow:hidden;position:relative;padding: 178px 0 162px;}
+.recruit-talent__bg{position:absolute;background: url(../images/sub/recruit_cover_img02.png) center/cover no-repeat;inset:0;}
+.recruit-cards{display:grid;position:relative;grid-template-columns:repeat(3, minmax(0, 1fr));gap: 29px;}
+.recruit-card{padding: 13px 25px 58px;border-radius:16px;background-color: rgba(0,0,0,.29);box-shadow: 4px 4px 6.3px 0.7px rgba(0,0,0,0.58);color:#fff;text-align:center;}
+.recruit-card__icon{display:block;width: 108px;height: 109px;margin: 0 auto 40px;}
+.recruit-card__title{margin: 0 0 65px;font-size: 48px;font-family: "Pretendard";color: rgb(255, 255, 255);font-weight: 700;line-height: 1.2;}
+.recruit-card__title > em{display:block;font-weight: 600;}
+.recruit-card__desc{margin:0;font-size: 24px;font-family: "Pretendard";color: rgb(255, 255, 255);line-height: 1.2;text-align: left;letter-spacing: -0.023em;}
 
 /* responsive */
 @media (max-width:900px){
