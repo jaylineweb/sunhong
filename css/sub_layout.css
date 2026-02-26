@@ -644,6 +644,7 @@
 /* 13. 왼쪽 타이틀(카드명) - text_wrap + text_desc 통일 */
 .core-values .text_wrap{width:126px;text-align: center;}
 .core-values .text_desc{font-weight:700; font-family:Pretendard; line-height:44px; word-wrap:break-word;}
+.core-values .text_desc.nowrap{text-indent:-22% !important;}
 .core-values .core-values__item .value_left .text_desc{color:#CF4662; font-size:35px;}
 .core-values .core-values__item.item01 .value_left .text_desc{color:#DA925E; font-size:36px;}
 .core-values .core-values__item_02 .value_left .text_desc{color:#CF4662; font-size:31px;}
