@@ -572,8 +572,8 @@
 /* ========== core-values: 공통 스타일 통일 ========== */
 
 /* 1. 루트 (기준 width 1280px 비율) */
-.core-values{display:inline-flex;width:100%;height:100%;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;align-items:flex-start;gap:134px;padding:88px 0;}
-
+.core-values{display:inline-flex;position:relative;width:100%;height:100%;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;align-items:flex-start;gap:134px;padding:88px 0;}
+.core-values:before{display:block;position:absolute;top:0;right:0;bottom:0;left:0;width:115px;height:90px;margin:auto;background-image:url(../images/sub/separate_line.png);background-repeat:no-repeat;background-position:center;background-size:contain;}
 /* 2. inner, frame (공통) - width 1280px 기준 */
 .core-values .core-values__inner{display:flex;align-self:stretch;flex-direction:column;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;align-items:flex-start;width:1280px;gap:7px;margin: auto;}
 .core-values .core-values_frame{display:inline-flex;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:flex-start;align-items:flex-start;}
@@ -609,19 +609,18 @@
 /* 7. 부제목 통일 (보라, 1280px 기준) */
 .core-values .value_em{color:#9720B8; font-size:29px; font-weight:700; font-family:Pretendard; line-height:35px; word-wrap:break-word;}
 
-/* 8. 설명 제목 통일: desc1, fspan_06, fspan_10, fspan_14 (진회색) */
+
 .core-values .desc1,
 .core-values .fspan_06,
 .core-values .fspan_10,
 .core-values .fspan_14{color:#5C595D; font-size:24px; font-weight:700; font-family:Pretendard; line-height:32px; word-wrap:break-word;}
 
-/* 9. 설명 본문 통일: desc2, fspan_07, fspan_11, fspan_15 (회색) */
+
 .core-values .desc2,
 .core-values .fspan_07,
 .core-values .fspan_11,
-.core-values .fspan_15{color:#8E8890; font-size:23px; font-weight:700; font-family:Pretendard; line-height:35px; word-wrap:break-word;}
+.core-values .fspan_15{color:#8E8890; font-size:22px; font-weight:500; font-family:Pretendard; letter-spacing: -0.035em; line-height:35px; word-wrap:break-word;}
 
-/* 10. textbox, desc_box 통일 (4개 동일) */
 .core-values .textbox,
 .core-values .textbox_01,
 .core-values .textbox_02,
@@ -631,17 +630,15 @@
 .core-values .desc_box_02,
 .core-values .desc_box_03{display:flex; flex-direction:column; -webkit-justify-content:flex-start;justify-content:flex-start; -webkit-align-items:flex-start;align-items:flex-start; gap:10px;}
 
-/* 11. value_text 통일 */
+
 .core-values .value_text{display:inline-flex; align-self:stretch; -webkit-justify-content:center;justify-content:center; -webkit-align-items:center;align-items:center; gap:7px;}
 
-/* 12. value_ico 통일 (아이콘 래퍼, 1280px 기준) */
 .core-values .value_ico{position:relative; width:68px; height:72px;}
 .core-values .value_ico svg{width:100%; height:100%; display:block;}
 .core-values .core-values__item_02 .value_ico{overflow:hidden; width:107px; height:90px;}
 .core-values .frame{overflow:hidden; position:absolute; top:-10px; left:-21px; width:111px; height:92px;}
 .core-values .frame_01{overflow:hidden; position:absolute; top:-9px; left:-16px; width:101px; height:90px;}
 
-/* 13. 왼쪽 타이틀(카드명) - text_wrap + text_desc 통일 */
 .core-values .text_wrap{width:126px;text-align: center;}
 .core-values .text_desc{font-weight:700; font-family:Pretendard; line-height:44px; word-wrap:break-word;}
 .core-values .text_desc.nowrap{text-indent:-22% !important;}
@@ -650,7 +647,7 @@
 .core-values .core-values__item_02 .value_left .text_desc{color:#CF4662; font-size:31px;}
 .core-values .core-values__item_03 .value_left .text_desc{color:#884D98; font-size:36px;}
 
-/* 14. 미사용(참고용) */
+
 .core-values .icon,
 .core-values .icon_01,
 .core-values .ico,
@@ -661,7 +658,7 @@
 .core-values .rectangle{width:101px; height:90px;}
 .core-values .row2{display:flex; align-self:stretch; flex-direction:column; -webkit-justify-content:flex-start;justify-content:flex-start; -webkit-align-items:flex-start;align-items:flex-start; gap:7px;}
 
-/* ========== core-values: 미디어 쿼리 (기준 1280px) ========== */
+
 @media (max-width:1280px){
   .core-values .core-values__inner{width:100%; max-width:100%; padding:0 20px; box-sizing:border-box;-webkit-align-items:center;align-items:center;}
   .core-values .core-values_frame{display:flex;}
@@ -701,9 +698,10 @@
   .core-values .core-values__item,
   .core-values .core-values__item.item01,
   .core-values .core-values__item_02,
-  .core-values .core-values__item_03{flex-direction:column; -webkit-align-items:center;align-items:center; gap:32px;}
+  .core-values .core-values__item_03{flex-direction:column; -webkit-align-items:center;align-items:center; gap:15px;}
   .core-values .value_left{width:100%; max-width:240px;}
-  .core-values .value_right{-webkit-align-items:center;align-items:center; text-align:center;}
+  .core-values .core-values__item .value_left, .core-values .core-values__item.item01 .value_left{gap:10px;}
+  .core-values .value_right{-webkit-align-items:center;align-items:center; text-align:center; gap:10px;}
   .core-values .core-values__item_03 .value_right{-webkit-align-items:center;align-items:center;}
   .core-values .value_right_title,
   .core-values .value_right_title_01,
