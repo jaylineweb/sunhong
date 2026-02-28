@@ -70,10 +70,10 @@
                         </button>
                     </div>
                     <ul class="lang-dropdown">
-                        <li><a href="/">KR</a></li>
-                        <li><a href="http://cn.yemat.com">CN</a></li>
-                        <li><a href="http://jp.yemat.com">JP</a></li>
-                        <li><a href="http://en.yemat.com">EN</a></li>
+                        <li><a href="/" data-lang="ko">KR</a></li>
+                        <li><a href="#" data-lang="zh-CN">CN</a></li>
+                        <li><a href="#" data-lang="ja">JP</a></li>
+                        <li><a href="#" data-lang="en">EN</a></li>
                     </ul>
                 </div>
 
@@ -255,6 +255,46 @@
             </div>
         </footer>
     </div>
+    <!-- Google Translate (숨김 처리, CN/JP/EN 클릭 시 쿠키로 언어 전환) -->
+    <div id="google_translate_element" class="sr-only" aria-hidden="true"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'ko',
+          includedLanguages: 'zh-CN,ja,en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+      (function() {
+        var langLabels = { ko: 'KR', 'zh-CN': 'CN', ja: 'JP', en: 'EN' };
+        function getCurrentLang() {
+          var m = document.cookie.match(/googtrans=([^;]+)/);
+          return m ? (m[1].split('/')[2] || 'ko') : 'ko';
+        }
+        function updateLangBtn() {
+          var lang = getCurrentLang();
+          var btn = document.querySelector('.lang-btn');
+          if (btn) btn.textContent = (langLabels[lang] || 'KR') + ' ▾';
+        }
+        updateLangBtn();
+        document.querySelectorAll('.lang-dropdown a[data-lang]').forEach(function(a) {
+          a.addEventListener('click', function(e) {
+            e.preventDefault();
+            var lang = this.getAttribute('data-lang');
+            if (lang === 'ko') {
+              document.cookie = 'googtrans=; path=/; max-age=0';
+            } else {
+              document.cookie = 'googtrans=/ko/' + lang + '; path=/; max-age=86400';
+            }
+            location.reload();
+          });
+        });
+      })();
+    </script>
     <script src="./js/script.js"></script>
 </body>
 </html>
