@@ -372,6 +372,9 @@
 @media all and (min-width:1401px){
   .certificate .inner{width:100%;max-width:unset;}
 }
+@media(max-width:1000px){
+  .certificate_item{flex:0 0 calc((100% - 40px) / 3); box-sizing:border-box;} /* 모바일: 1행 3열 */
+}
 
 /* certificate 모바일: 1행 2열 */
 @media(max-width:768px){
