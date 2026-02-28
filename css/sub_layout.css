@@ -146,7 +146,7 @@
 .news-card.large img{height:340px;}
 .news-content{padding-top:16px;}
 .meta{display:block; margin-bottom:10px; color:#999; font-size:14px;}
-.news-card h3{font-size:22px; line-height:1.4;}
+.news-card h3{font-size:22px; line-height:1.4;text-shadow:0px 6px 6.58px rgba(0, 0, 0, 0.74)}
 .news-card p{margin-top:12px; color:#777; font-size:14px;}
 .point{color:#ed0f0f;}
 .news-card:hover{transform:translateY(-6px);}
@@ -531,10 +531,10 @@
 }
 
 
-.production-highlight{overflow:hidden; position:relative; padding:120px 20px; background:url("https://cdn.imweb.me/thumbnail/20251015/b07cb6e65651b.jpg") center / cover no-repeat;}
+.production-highlight{overflow:hidden;position:relative;padding: 260px 0;background:url("../images/sub/factory_topimg.png") center / cover no-repeat;}
 .production-highlight::before{position:absolute; background:rgba(0, 0, 0, 0.4); content:""; inset:0;}
 .production-highlight__inner{position:relative; max-width:1000px; margin:0 auto; text-align:center;}
-.production-highlight h3{color:#fff; font-size:24px; font-weight:600; line-height:1.6;}
+.production-highlight h3{color:#fff;font-size: 32px;font-weight:600;line-height:1.6;}
 
 /* 모바일 */
 @media (max-width:768px){
@@ -543,7 +543,7 @@
 }
 
 
-.factory-process{padding:80px 20px 80px;background-color:#e8e6d966;}
+.factory-process{padding:80px 20px 80px;background-color:#f1efe7;}
 .factory-process__inner{max-width:1200px; margin:0 auto;}
 .factory-process__title{margin:0 0 40px; color:#333; font-size:32px; font-weight:700; text-align:center;}
 .factory-process-steps{display:grid;margin:0;padding:0;list-style:none;grid-template-columns:repeat(7, 1fr);gap:0px;}

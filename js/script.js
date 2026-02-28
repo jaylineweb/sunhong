@@ -193,15 +193,7 @@ if (lang && langBtn) {
     document.removeEventListener('mousemove', onMouseMove);
     document.removeEventListener('mouseup', onMouseUp);
   }
-  carouselEl.addEventListener('mousedown', function (e) {
-    if (e.button !== 0) return;
-    e.preventDefault();
-    startDrag(e.clientX);
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  });
-
-  // Nav buttons
+  // Nav buttons (드래그보다 먼저 생성해 mousedown에서 제외 가능하도록)
   const nav = document.createElement('div');
   nav.className = 'factory-process-carousel__nav';
   nav.setAttribute('aria-label', '캐러셀 이전/다음');
@@ -221,6 +213,16 @@ if (lang && langBtn) {
 
   btnPrev.addEventListener('click', prev);
   btnNext.addEventListener('click', next);
+
+  // 마우스 드래그 (화살표 영역 클릭 시에는 드래그 시작하지 않음 → click 이벤트 정상 발생)
+  carouselEl.addEventListener('mousedown', function (e) {
+    if (e.button !== 0) return;
+    if (e.target.closest('.factory-process-carousel__nav')) return;
+    e.preventDefault();
+    startDrag(e.clientX);
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  });
 
   updateLayout();
   window.addEventListener('resize', updateLayout);
