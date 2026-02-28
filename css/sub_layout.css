@@ -335,7 +335,7 @@
 }
 
 
-.cert-hero{position:relative; padding:120px 0; background:url("../images/sub/certificate_topimg.png") top center/cover no-repeat;}
+.cert-hero{position:relative; padding:261px 0; background:url("../images/sub/certificate_topimg.png") top center/cover no-repeat;}
 /* 어두운 오버레이 */
 .certi_title{margin-bottom:109px;color:#424242; font-size:42px; font-weight:600; line-height:1.2; text-align:center;}
 @media(max-width:1024px){
@@ -346,7 +346,13 @@
 }
 .cert-hero::before{position:absolute; background:rgba(0,0,0,.35); content:""; inset:0;}
 .cert-hero .inner{position:relative; max-width:1200px; margin:0 auto; padding:0 20px; text-align:center;}
-.cert-hero h6{color:#fff; font-size:22px; font-weight:600; line-height:1.6;}
+.cert-hero h6{color:#fff; font-size:32px; font-weight:600; line-height:1.6;}
+@media(max-width:1024px){
+  .cert-hero h6{font-size:24px;}
+}
+@media(max-width:768px){
+  .cert-hero h6{font-size:16px;}
+}
 
 /* 모바일 */
 @media(max-width:768px){
