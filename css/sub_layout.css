@@ -335,8 +335,15 @@
 }
 
 
-.cert-hero{position:relative; padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/b9467af90e355.png") center/cover no-repeat;}
+.cert-hero{position:relative; padding:120px 0; background:url("../images/sub/certificate_topimg.png") top center/cover no-repeat;}
 /* 어두운 오버레이 */
+.certi_title{margin-bottom:109px;color:#424242; font-size:42px; font-weight:600; line-height:1.2; text-align:center;}
+@media(max-width:1024px){
+  .certi_title{margin-bottom:70px; font-size:34px;}
+}
+@media(max-width:768px){
+  .certi_title{margin-bottom:40px; font-size:24px;}
+}
 .cert-hero::before{position:absolute; background:rgba(0,0,0,.35); content:""; inset:0;}
 .cert-hero .inner{position:relative; max-width:1200px; margin:0 auto; padding:0 20px; text-align:center;}
 .cert-hero h6{color:#fff; font-size:22px; font-weight:600; line-height:1.6;}
