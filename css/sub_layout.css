@@ -373,6 +373,14 @@
   .certificate .inner{width:100%;max-width:unset;}
 }
 
+/* certificate 모바일: 1행 2열 */
+@media(max-width:768px){
+  .certificate{padding:0 20px;}
+  .certificate_list{flex-wrap:wrap; gap:20px; justify-content:center;}
+  .certificate_item{flex:0 0 calc(50% - 10px); box-sizing:border-box;}
+  .certificate_title{font-size:18px; margin-bottom:24px;}
+}
+
 .contact-intro{padding:120px 0; background:url("https://cdn.imweb.me/thumbnail/20251015/5714e9e6fe32c.jpg") center/cover no-repeat;}
 .contact-intro .inner{max-width:1200px; margin:0 auto; padding:0 20px; text-align:center;}
 .contact-intro p{color:#fff; font-size:20px; font-weight:600; line-height:1.6;}
