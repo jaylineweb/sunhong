@@ -145,9 +145,6 @@
                         <li><img src="../images/sub/mark_haccp.png" alt="haccp"></li>
                         <li><img src="../images/sub/mark_bureau.png" alt="bureau"></li>                        
                     </ul>
-
-                    
-                    
                 </div>
             </section>
             <section class="certificate">
@@ -158,37 +155,52 @@
                             <div class="certificate_title">
                                 &lt;FDA등록증&gt;
                             </div>
-                            <div class="certificate_imagebox">
-                                <img src="../images/sub/certificate_img01.png" alt="fda">
+                            <div class="certificate_imagebox" role="button" tabindex="0" aria-label="FDA등록증 보기">
+                                <img src="../images/sub/certificate_img01.png" alt="FDA등록증">
                             </div>
                         </div>
                         <div class="certificate_item">
                             <div class="certificate_title">
                                 &lt;HACCP인증서 국문&gt;
                             </div>
-                            <div class="certificate_imagebox">
-                                <img src="../images/sub/certificate_img02.png" alt="fda">
+                            <div class="certificate_imagebox" role="button" tabindex="0" aria-label="HACCP인증서 국문 보기">
+                                <img src="../images/sub/certificate_img02.png" alt="HACCP인증서 국문">
                             </div>
                         </div>
                         <div class="certificate_item">
                             <div class="certificate_title">
                                 &lt;HACCP인증서 영문&gt;
                             </div>
-                            <div class="certificate_imagebox">
-                                <img src="../images/sub/certificate_img03.png" alt="haccp">
+                            <div class="certificate_imagebox" role="button" tabindex="0" aria-label="HACCP인증서 영문 보기">
+                                <img src="../images/sub/certificate_img03.png" alt="HACCP인증서 영문">
                             </div>
                         </div>
                         <div class="certificate_item">
                             <div class="certificate_title">
                                 &lt;한국뷰로베리타스 홈플러스 시험성적서&gt;
                             </div>
-                            <div class="certificate_imagebox">
-                                <img src="../images/sub/certificate_img04.png" alt="bureau">
+                            <div class="certificate_imagebox" role="button" tabindex="0" aria-label="한국뷰로베리타스 홈플러스 시험성적서 보기">
+                                <img src="../images/sub/certificate_img04.png" alt="한국뷰로베리타스 홈플러스 시험성적서">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- 인증서 라이트박스 (슬라이드) -->
+            <div class="certificate-lightbox" id="certificateLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="인증서 보기">
+                <div class="certificate-lightbox__overlay"></div>
+                <div class="certificate-lightbox__inner">
+                    <button type="button" class="certificate-lightbox__close" aria-label="닫기">×</button>
+                    <button type="button" class="certificate-lightbox__prev" aria-label="이전">‹</button>
+                    <button type="button" class="certificate-lightbox__next" aria-label="다음">›</button>
+                    <div class="certificate-lightbox__content">
+                        <img src="" alt="" class="certificate-lightbox__img">
+                        <p class="certificate-lightbox__caption"></p>
+                    </div>
+                </div>
+            </div>
+
             <footer class="site-footer">
                 <div class="site-footer__inner">
                     <!-- 로고 -->
@@ -235,5 +247,6 @@
         </footer>
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/certificate-lightbox.js"></script>
 </body>
 </html>
