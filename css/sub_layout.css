@@ -442,7 +442,7 @@
 /* 내용 */
 .brand-visual .inner{position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:0 20px;}
 
-.brand-visual h2{color:#fff;font-size: 32px;font-family:'Pretendard';font-weight:600;line-height: 1.4;}
+.brand-visual h2{color:#fff;font-size: 32px;font-family:'Pretendard';font-weight:600;line-height: 1.4;text-shadow: 0px 6px 6.58px rgba(0, 0, 0, 0.74);}
 
 /* 모바일 */
 @media(max-width:768px){
@@ -539,7 +539,7 @@
 .production-highlight{overflow:hidden;position:relative;padding: 260px 0;background:url("../images/sub/factory_topimg.png") center / cover no-repeat;}
 .production-highlight::before{position:absolute; background:rgba(0, 0, 0, 0.4); content:""; inset:0;}
 .production-highlight__inner{position:relative; max-width:1000px; margin:0 auto; text-align:center;}
-.production-highlight h3{color:#fff;font-size: 32px;font-weight:600;line-height:1.6;}
+.production-highlight h3{color:#fff;font-size: 32px;font-weight:600;line-height:1.6;text-shadow: 0px 6px 6.58px rgba(0, 0, 0, 0.74);}
 
 /* 모바일 */
 @media (max-width:768px){
@@ -600,7 +600,7 @@
 .recruit-hero{overflow:hidden; position:relative; padding:260px 0;}
 .recruit-hero__bg{position:absolute;inset:0;padding:120px 0;background-image:url(../images/sub/value_top_img.png);background-position:50% 0;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;text-align:center;}
 .recruit-hero__overlay{position:absolute;background:rgba(0, 0, 0, 0.4);inset:0;}
-.recruit-hero__title{position:relative;margin:0;color:#fff;font-size: 32px;font-weight: 600;text-align:center;line-height: 1.2;}
+.recruit-hero__title{position:relative;margin:0;color:#fff;font-size: 32px;font-weight: 600;text-align:center;line-height: 1.2;text-shadow: 0px 6px 6.58px rgba(0, 0, 0, 0.74);}
 
 /* section spacing */
 .recruit-section{padding:120px 0;}
