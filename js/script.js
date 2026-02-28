@@ -57,18 +57,19 @@ document.querySelectorAll('.gnb-mobile .depth2 a').forEach((a) => {
   a.addEventListener('click', () => closeMenu());
 });
 
-// Language Dropdown
-const lang = document.querySelector('.language');
-const langBtn = document.querySelector('.lang-btn');
-if (lang && langBtn) {
-  langBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    lang.classList.toggle('active');
-  });
-  document.addEventListener('click', () => {
-    lang.classList.remove('active');
-  });
-}
+// Language Dropdown (데스크톱 + 모바일 각각)
+document.querySelectorAll('.language').forEach((lang) => {
+  const langBtn = lang.querySelector('.lang-btn');
+  if (langBtn) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      lang.classList.toggle('active');
+    });
+  }
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.language').forEach((lang) => lang.classList.remove('active'));
+});
 
 // Factory process carousel (vanilla JS) – drag & swipe 지원
 (function () {

@@ -72,6 +72,13 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
     .gnb .gnb_contact .btn-primary:hover{background:#fff5ee;}
     .gnb-mobile .gnb-item.open > .depth2{position:static;border-left-width:0;border-right-width:0;border-bottom-width:0;}
     .language{display:none;}
+    .language.mobile{display:block;}
+    .language.mobile .language-inner{padding:0 20px;}
+    .language.mobile .language-inner .lang-btn{display:flex;align-items:center;justify-content:space-between;padding:14px 0;color:#333;font-size:15px;width:100%;}
+    .language.mobile .lang-btn .arrow{display:inline-block;width:10px;height:10px;border-right:2px solid #333;border-bottom:2px solid #333;transform:rotate(45deg);margin-left:8px;transition:transform 0.25s;}
+    .language.mobile.active .lang-btn .arrow{transform:rotate(-135deg);}
+    .language.mobile .language-inner + .lang-dropdown{position:relative;padding:0 20px;}
+    .language.mobile .language-inner + .lang-dropdown li a{padding-right:0;padding-left:0;}
 }
 
 .site-footer{padding:120px 0; background:#fafafa; color:#919191; font-size:14px;}
