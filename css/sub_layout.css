@@ -631,6 +631,8 @@
 @media (max-width:900px){
   .recruit-section, .recruit-hero, .recruit-talent{padding:72px 0;}
   .recruit-cards{grid-template-columns:1fr;}
+  .recruit-card__desc{text-align:center;}
+  .recruit-card__desc br{display:none;}
   .recruit-hero__title{font-size:20px;}
 }
 
