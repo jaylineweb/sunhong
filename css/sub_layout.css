@@ -161,9 +161,9 @@
     .news-grid{grid-template-columns:1fr;}
 }
 
-.brand-statement{position:relative;padding:120px 0;background-image:linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5)), url("../images/sub/top_img01.png");background-position:50% 125px;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;text-align:center;}
+.brand-statement{position:relative;padding: 260px 0;background-image:linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5)), url("../images/sub/top_img01.png");background-position:50% 125px;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;text-align:center;}
 .brand-statement__inner{max-width:1200px; margin:0 auto; color:#fff; text-align:center;}
-.brand-statement__inner p{font-size:20px;font-family:'Pretendard';font-weight:600;line-height:1.8;text-shadow:0px 6px 6.58px rgba(0, 0, 0, 0.74);}
+.brand-statement__inner p{font-size: 32px;font-family:'Pretendard';font-weight:600;line-height: 1.2;text-shadow:0px 6px 6.58px rgba(0, 0, 0, 0.74);}
 .brand-statement__inner p + p{margin-top:12px;}
 
 /* 모바일 대응 */
@@ -431,7 +431,7 @@
 
 
 
-.brand-visual{position:relative;padding:120px 0;background-image:url(../images/sub/value_top_img.png);background-position:50% 125px;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;text-align:center;}
+.brand-visual{position:relative;padding: 260px 0;background-image:url(../images/sub/value_top_img.png);background-position: 50% 0;background-size:cover;background-repeat:no-repeat;/* background-attachment:fixed; */text-align:center;}
 
 /* 흑백 효과 */
 /* .brand-visual{filter:grayscale(100%);} */
@@ -442,7 +442,7 @@
 /* 내용 */
 .brand-visual .inner{position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:0 20px;}
 
-.brand-visual h2{color:#fff; font-size:24px; font-family:'Pretendard'; font-weight:600; line-height:1.8;}
+.brand-visual h2{color:#fff;font-size: 32px;font-family:'Pretendard';font-weight:600;line-height: 1.4;}
 
 /* 모바일 */
 @media(max-width:768px){
@@ -504,10 +504,10 @@
   .process .process-row .txt{text-align:left;}
 }
 
-.brand-message{position:relative; padding:140px 20px; background:url("../images/sub/partner_topimg.png") center / cover no-repeat;}
+.brand-message{position:relative;padding: 260px 0;background:url("../images/sub/partner_topimg.png") center / cover no-repeat;}
 .brand-message::before{position:absolute; background:rgba(0,0,0,.3);/* 필요 없으면 제거 */ content:""; inset:0;}
 .brand-message__inner{position:relative; max-width:1200px; margin:0 auto; text-align:center;}
-.brand-message h5{color:#fff; font-size:24px; font-weight:600; line-height:1.4;}
+.brand-message h5{color:#fff;font-size: 32px;font-weight:600;line-height:1.4;}
 
 /* 모바일 */
 @media(max-width:768px){
