@@ -321,6 +321,7 @@
 .cert-divider{margin-top:80px; border:0; border-top:1px solid #363636;}
 .cert-grid + h2{margin-top:100px;}
 @media all and (min-width:1200px){
+  .cert-section .inner{width:100%;max-width:unset;}
   .cert-grid {gap:128px;}
   .cert-grid li{max-width:250px;}
 }
