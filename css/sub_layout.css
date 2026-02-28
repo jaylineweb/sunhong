@@ -520,15 +520,18 @@
 .partners{max-width: 1704px;margin:0 auto;padding: 120px 0;}
 .partners__group{margin-bottom:80px;}
 .partners__title{margin-bottom:40px; color:#333; font-size:32px; font-weight:600; text-align:center;}
-.partners__grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;row-gap: 103px;}
-.partners__grid img{display:block;flex: 0 1 auto;width: auto;max-height:200px;margin:0 auto;transition:.3s ease;object-fit:contain;}
+
 .partners__grid img:hover{opacity:.85; transform:scale(1.05);}
 
+@media (min-width:769px) and (max-width:1000px){
+  .partners__grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;row-gap: 103px;}
+  .partners__grid img{display:block;flex: 0 1 auto;width: auto;max-height:200px;margin:0 auto;transition:.3s ease;object-fit:contain;}
+}
 /* 모바일 */
 @media(max-width:768px){
   .partners{padding:80px 20px;}
-  .partners__grid{gap:30px;}
-  .partners__grid img{flex-basis:calc((100% - 30px) / 2);}
+  .partners__grid{font-size: 0;gap:30px;line-height: 0;}
+  .partners__grid img{width:auto;max-width: 49%;max-height:100px;padding: 2%;}
 }
 
 
