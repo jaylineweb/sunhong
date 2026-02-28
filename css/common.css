@@ -34,6 +34,7 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 .gnb-item.active > .depth2{display:block;}
 .language.active > .lang-dropdown{display:block;}
 .taegukgi-icon{display:inline-block; width:16px; height:16px;}
+.sr-only,#google_translate_element{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
 
 
 /* 햄버거 버튼 (모바일에서만 표시) */
