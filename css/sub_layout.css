@@ -462,6 +462,7 @@
 .process .process-row.reverse{direction:ltr;}
 .process .process-row.reverse > *,
 .process .process-row.reverse .txt.right{text-align:right;}
+.process .process-row[data-layer-step="2"]{}
 
 
 /* image */
@@ -502,6 +503,8 @@
   .process .process-row{grid-template-columns:1fr; gap:32px; margin-bottom:5%;}
   .process .process-row .img img{height:320px;}
   .process .process-row .txt{text-align:left;}
+  .process .process-row[data-layer-step="2"] .txt{order:2;}
+  .process .process-row[data-layer-step="2"] .img{order:1;}
 }
 
 .brand-message{position:relative;padding: 260px 0;background:url("../images/sub/partner_topimg.png") center / cover no-repeat;}
