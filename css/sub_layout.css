@@ -528,10 +528,11 @@
 
 .partners__grid img{transition:.3s ease;}
 .partners__grid img:hover{opacity:.85; transform:scale(1.05);}
+.partners__grid img{display:block;flex: 0 1 auto;width:auto;max-height:200px;margin:0 auto;object-fit:contain;}
 
-@media (min-width:769px) and (max-width:1921px){
+@media (min-width:769px) and (max-width:1704px){
   .partners__grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;row-gap: 103px;}
-  .partners__grid img{display:block;flex: 0 1 auto;width: auto;max-height:200px;margin:0 auto;object-fit:contain;}
+  .partners__grid img{width:33.333%;}
 }
 /* 모바일 */
 @media(max-width:768px){
