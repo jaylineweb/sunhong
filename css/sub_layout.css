@@ -537,7 +537,7 @@
 @media(max-width:768px){
   .partners{padding:80px 20px;}
   .partners__grid{font-size: 0;gap:30px;line-height: 0;}
-  .partners__grid img{width:auto;max-width: 49%;max-height:100px;padding: 2%;}
+  .partners__grid img{width:auto;max-width:33.333%;max-height:100px;padding: 2%;}
 }
 
 
