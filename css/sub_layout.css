@@ -504,6 +504,7 @@
   .process .process-row .img img{height:320px;}
   .process .process-row .txt{text-align:left;}
   .process .process-row[data-layer-step="2"] .txt{order:2;}
+  .process .process-row.reverse{padding:0 5%;}
   .process .process-row.reverse .txt.right{text-align:left;}
   .process .process-row[data-layer-step="2"] .img{order:1;}
 }
