@@ -639,6 +639,7 @@
   .recruit-card__desc{text-align:center;}
   .recruit-card__desc br{display:none;}
   .recruit-hero__title{font-size:20px;}
+  .recruit-section__desc em{display:block;}
 }
 
 
