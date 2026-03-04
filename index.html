@@ -7,6 +7,9 @@
     <title>선홍수산</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- Slick (모바일 제품 슬라이더용) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css" />
 </head>
 
 <body>
@@ -415,6 +418,54 @@
             }
             location.reload();
           });
+        });
+      })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      // 제품 리스트: 640px 이하에서만 Slick 슬라이더 적용
+      (function () {
+        var MOBILE_BREAKPOINT = 768;
+        var $list = $('.products__list');
+        var slickInited = false;
+
+        function initProductsSlick() {
+          if ($list.length && !slickInited && window.innerWidth <= MOBILE_BREAKPOINT) {
+            $list.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              variableWidth: true,
+              centerMode: true,
+              swipe: true,
+              draggable: true,
+              autoplay: true,
+              arrows: false,
+              dots: true,
+              infinite: true
+            });
+            slickInited = true;
+          }
+        }
+
+        function destroyProductsSlick() {
+          if ($list.length && slickInited && window.innerWidth > MOBILE_BREAKPOINT) {
+            $list.slick('unslick');
+            slickInited = false;
+          }
+        }
+
+        function checkProductsSlick() {
+          if (window.innerWidth <= MOBILE_BREAKPOINT) {
+            initProductsSlick();
+          } else {
+            destroyProductsSlick();
+          }
+        }
+
+        $(function () {
+          checkProductsSlick();
+          $(window).on('resize', checkProductsSlick);
         });
       })();
     </script>

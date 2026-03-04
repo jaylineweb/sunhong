@@ -196,12 +196,16 @@ html{}
     .products{padding:60px 16px; gap:28px;}
     .products__title{font-size:28px; margin-bottom:20px;}
     .products__subtitle{font-size:16px;}
-    .products__list{flex-direction:column; align-items:center; gap:24px;}
+    .products__list{width:100%;flex-direction:column; align-items:center; gap:24px;}
     .products__item{width:100%; max-width:320px;}
     .products__item img{width:100%; height:auto; aspect-ratio:1;}
-    .products__name{font-size:14px;}
+    .products__name{display:block;width:100%;margin-top:2%;padding:2% 0;font-size:16px;}
+    .products__name br{display:none;}
     .products__more{margin-top:8px;}
     .products__more-btn{font-size:15px; padding:6px 12px;}
+    /* Slick: 활성 슬라이드만 보이고 나머지는 fadeout(opacity 0) */
+    .products__list.slick-initialized .slick-slide{opacity:0; transition:opacity 0.35s ease;}
+    .products__list.slick-initialized .slick-slide.slick-current{opacity:1;}
 }
 @media (max-width:480px){
     .products{padding:40px 12px; gap:24px;}
