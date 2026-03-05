@@ -63,10 +63,10 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 
 @media (max-width:768px){
     .btn-menu{display:flex;}
-    .header-inner{height: auto;padding: 2% 12px;}
+    .header-inner{max-width:unset;height:auto;padding:2% 12px;}
     .logo{flex:1;text-align:center;}
     .logo a{display:inline-block;}
-    .logo img{height: 53px;}
+    .logo img{height:53px;}
     .gnb .gnb-list{display:none;}
     .gnb .gnb_contact .btn-primary{min-width: unset;padding: 8px 11px;background:#fff;color:#ed0f0f;border:2px solid #ed0f0f;font-size: 15px;}
     .gnb .gnb_contact .btn-primary:hover{background:#fff5ee;}
