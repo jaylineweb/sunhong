@@ -218,6 +218,8 @@
     .map-wrap{grid-template-columns:1fr;}
     #daumRoughmapContainer1771079586917{height:auto;}
     .map-wrap .root_daum_roughmap_landing{width:100% !important;}
+    .map-info{text-align:center;}
+    .map-info .map-btn{margin-right:auto; margin-left:auto;}
 }
 
 
