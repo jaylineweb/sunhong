@@ -665,6 +665,14 @@
 .core-values .core-values__item.item01{width:632px;-webkit-justify-content:space-between;justify-content:space-between;}
 .core-values .core-values__item_02{width:624px;-webkit-justify-content:space-between;justify-content:space-between;}
 .core-values .core-values__item_03{gap:32px;}
+.core-values .core-values__item:nth-child(1){}
+.core-values .core-values__item:nth-child(1) .value_left .text_desc{color:#618f3f;}
+.core-values .core-values__item:nth-child(1) .value_em{color:#618f3f;}
+.core-values .core-values__item:nth-child(2){}
+.core-values .core-values__item:nth-child(2) .value_em{color:#db935e;}
+.core-values__item_02 .value_em{}
+.core-values .core-values__item_02 .value_em{color:#d04462;}
+.core-values .core-values__item_03 .value_em{color:#894c99;}
 
 /* 4. value_left 통일 (gap은 부모 item으로 구분) */
 .core-values .value_left{display:inline-flex;width:auto;flex-direction:column;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;align-items:center;}

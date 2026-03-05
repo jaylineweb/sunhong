@@ -1,3 +1,70 @@
+// ----- Google Translate & 언어 전환 (공통) -----
+function googleTranslateElementInit() {
+  if (typeof google !== 'undefined' && google.translate && google.translate.TranslateElement) {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ko',
+      includedLanguages: 'zh-CN,ja,en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+}
+
+(function () {
+  var langLabels = { ko: 'KR', 'zh-CN': 'CN', ja: 'JP', en: 'EN' };
+  function getCurrentLang() {
+    var m = document.cookie.match(/googtrans=([^;]+)/);
+    return m ? (m[1].split('/')[2] || 'ko') : 'ko';
+  }
+  var langToClass = { 'zh-CN': 'chinese', ja: 'japanese', en: 'english' };
+  var flagAlt = { ko: '한국어', zh: '중국말', ja: '일본말', en: '영어' };
+  function updateLanguageFlag() {
+    var lang = getCurrentLang();
+    var srcKey = (lang === 'zh-CN' ? 'zh' : lang === 'ja' ? 'ja' : lang === 'en' ? 'en' : 'ko');
+    document.querySelectorAll('.language .taegukgi-icon .lang-flag').forEach(function (img) {
+      var src = img.getAttribute('data-src-' + srcKey) || img.getAttribute('data-src-ko');
+      if (src) { img.src = src; }
+      img.alt = flagAlt[srcKey] || flagAlt.ko;
+    });
+  }
+  function updateLangBtn() {
+    var lang = getCurrentLang();
+    var label = langLabels[lang] || 'KR';
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      var textEl = btn.querySelector('.lang-btn-text');
+      if (textEl) textEl.textContent = label;
+      else btn.textContent = label + ' ▾';
+    });
+  }
+  function updateLanguageClass() {
+    var lang = getCurrentLang();
+    var addClass = langToClass[lang] || null;
+    document.querySelectorAll('.language').forEach(function (el) {
+      el.classList.remove('chinese', 'japanese', 'english');
+      if (addClass) el.classList.add(addClass);
+    });
+  }
+  updateLangBtn();
+  updateLanguageClass();
+  updateLanguageFlag();
+  var nameEl = document.querySelector('.privacy-officer-name');
+  if (nameEl) {
+    nameEl.textContent = (getCurrentLang() === 'zh-CN' || getCurrentLang() === 'ja' || getCurrentLang() === 'en') ? 'Yoon hong 대표님' : '윤현우';
+  }
+  document.querySelectorAll('.lang-dropdown a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var lang = this.getAttribute('data-lang');
+      if (lang === 'ko') {
+        document.cookie = 'googtrans=; path=/; max-age=0';
+      } else {
+        document.cookie = 'googtrans=/ko/' + lang + '; path=/; max-age=86400';
+      }
+      location.reload();
+    });
+  });
+})();
+
 // GNB Dropdown (데스크톱)
 document.querySelectorAll('.gnb:not(.gnb-mobile) .has-dropdown').forEach(item => {
   item.addEventListener('mouseenter', () => {

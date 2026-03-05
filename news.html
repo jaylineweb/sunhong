@@ -63,7 +63,7 @@
                 <div class="language">
                     <div class="language-inner">
                         <span class="taegukgi-icon">
-                            <img src="./common/img/flag_shapes/flag_kr_circle.png" alt="택스기">
+                            <img class="lang-flag" src="./common/img/flag_shapes/flag_kr_circle.png" alt="한국어" data-src-ko="./common/img/flag_shapes/flag_kr_circle.png" data-src-zh="./common/img/flag_shapes/flag_CN_circle.png" data-src-ja="./common/img/flag_shapes/flag_jp_circle.png" data-src-en="./common/img/flag_shapes/flag_en_circle.png">
                         </span>
                         <button class="lang-btn">
                             KR ▾
@@ -259,66 +259,7 @@
     </div>
     <!-- Google Translate (숨김 처리, CN/JP/EN 클릭 시 쿠키로 언어 전환) -->
     <div id="google_translate_element" class="sr-only" aria-hidden="true"></div>
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'ko',
-          includedLanguages: 'zh-CN,ja,en',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-    </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-      (function() {
-        var langLabels = { ko: 'KR', 'zh-CN': 'CN', ja: 'JP', en: 'EN' };
-        function getCurrentLang() {
-          var m = document.cookie.match(/googtrans=([^;]+)/);
-          return m ? (m[1].split('/')[2] || 'ko') : 'ko';
-        }
-        var langToClass = { 'zh-CN': 'chinese', ja: 'japanese', en: 'english' };
-        function updateLangBtn() {
-          var lang = getCurrentLang();
-          var label = langLabels[lang] || 'KR';
-          document.querySelectorAll('.lang-btn').forEach(function(btn) {
-            var textEl = btn.querySelector('.lang-btn-text');
-            if (textEl) textEl.textContent = label;
-            else btn.textContent = label + ' ▾';
-          });
-        }
-        function updateLanguageClass() {
-          var lang = getCurrentLang();
-          var addClass = langToClass[lang] || null;
-          document.querySelectorAll('.language').forEach(function(el) {
-            el.classList.remove('chinese', 'japanese', 'english');
-            if (addClass) el.classList.add(addClass);
-          });
-        }
-        updateLangBtn();
-        updateLanguageClass();
-        // CN/JP/EN 선택 시 개인정보관리책임자 이름을 'Yoon hong 대표님'으로 표시
-        (function() {
-          var lang = getCurrentLang();
-          var nameEl = document.querySelector('.privacy-officer-name');
-          if (nameEl) {
-            nameEl.textContent = (lang === 'zh-CN' || lang === 'ja' || lang === 'en') ? 'Yoon hong 대표님' : '윤현우';
-          }
-        })();
-        document.querySelectorAll('.lang-dropdown a[data-lang]').forEach(function(a) {
-          a.addEventListener('click', function(e) {
-            e.preventDefault();
-            var lang = this.getAttribute('data-lang');
-            if (lang === 'ko') {
-              document.cookie = 'googtrans=; path=/; max-age=0';
-            } else {
-              document.cookie = 'googtrans=/ko/' + lang + '; path=/; max-age=86400';
-            }
-            location.reload();
-          });
-        });
-      })();
-    </script>
     <script src="./js/script.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
