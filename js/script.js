@@ -65,6 +65,19 @@ function googleTranslateElementInit() {
   });
 })();
 
+// 제품 더보기 / 대표 상품만 보기 토글 (product 페이지)
+(function () {
+  var grid = document.querySelector('.product-grid');
+  var btn = document.querySelector('.product-button');
+  if (grid && btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      grid.classList.toggle('show');
+      btn.textContent = grid.classList.contains('show') ? '대표 상품만 보기' : '제품 더보기';
+    });
+  }
+})();
+
 // GNB Dropdown (데스크톱)
 document.querySelectorAll('.gnb:not(.gnb-mobile) .has-dropdown').forEach(item => {
   item.addEventListener('mouseenter', () => {
