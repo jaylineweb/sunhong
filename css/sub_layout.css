@@ -232,7 +232,7 @@
   .product-image{height:320px;}
 }
 
-.store-cta{position:relative;padding: 120px 0;background-image: url("../images/product/product_bg.png");background-position:center;background-size:cover;background-attachment:fixed;}
+.store-cta{position:relative;padding: 120px 0;background-image: url("../images/product/product_bg01.png");background-position:center;background-size:cover;background-attachment:fixed;}
 
 /* 오버레이 */
 .store-cta::before{position:absolute; background:rgba(0,0,0,.3); content:""; inset:0;}
