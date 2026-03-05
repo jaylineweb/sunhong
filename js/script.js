@@ -78,6 +78,23 @@ function googleTranslateElementInit() {
   }
 })();
 
+// 서브 내비: 현재 페이지 링크에 is-active 클래스 적용 (공통)
+(function () {
+  var list = document.querySelector('.sub-nav__list');
+  if (!list) return;
+  var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  var currentPage = currentPath.split('/').pop() || '';
+  list.querySelectorAll('li').forEach(function (li) {
+    li.classList.remove('is-active');
+    var a = li.querySelector('a');
+    if (a && a.href) {
+      var linkPath = (new URL(a.href, window.location.origin)).pathname.replace(/\/$/, '') || '/';
+      var linkPage = linkPath.split('/').pop() || '';
+      if (currentPage && linkPage && currentPage === linkPage) li.classList.add('is-active');
+    }
+  });
+})();
+
 // GNB Dropdown (데스크톱)
 document.querySelectorAll('.gnb:not(.gnb-mobile) .has-dropdown').forEach(item => {
   item.addEventListener('mouseenter', () => {
