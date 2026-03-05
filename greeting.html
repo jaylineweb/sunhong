@@ -154,33 +154,38 @@
                     <div class="greeting-text">
                         <h2>인사말</h2>
                         <p>
-                            백화점 식품부 본부장 출신, 16년 근무.<br>
-                            건어물 생산 현장을 직접 보며 결심했습니다.<br>
-                            “신뢰할 수 있는 품질의 건어물을 만들겠다.”
+                            백화점 식품부 본부장 출신, 16년 근무.
+                            <br>건어물 생산 현장을 직접 보며 결심했습니다.
+                            <br>“신뢰할 수 있는 품질의 건어물을 만들겠다.”
                         </p>
 
                         <p>
-                            그래서 직접 생산을 시작했습니다.<br>
-                            기준은 만들던 사람이,<br>
-                            이제 그 기준으로 만듭니다.
+                            그래서 직접 생산을 시작했습니다.
+                            <br>기준을 만들던 사람이, 이제 그 기준으로 만듭니다.
                         </p>
 
                         <p>
-                            한 세대가 세운 기준은<br>
-                            다음 세대의 책임으로 이어졌습니다.
+                            한 세대가 세운 기준은
+                            <br>다음 세대의 책임으로 이어졌습니다.
                         </p>
 
                         <p>
-                            프랑스 국제 공인 검사기관 Bureau Veritas 검증,<br>
-                            FDA 등록, HACCP 인증,<br>
-                            전문 위생 제조공장 생산.
+                            프랑스 국제 공인 검사기관 한국뷰로베리타스(Bureau Veritas) 검증,
+                            <br>FDA 등록,
+                            <br>HACCP 인증,
+                            <br>전문 위생 제조공장 생산.
                         </p>
 
                         <p>
-                            건어물일수록 더 깨끗해야 한다는 믿음으로.<br>
-                            28년간 대형 유통업체 납품과 미국 수출로 품질을 증명했습니다.<br>
-                            맛은 기본,<br>
-                            그 위에 안심을 더합니다.
+                            건어물일수록 더 깨끗해야 한다는 믿음으로.
+                            <br>28년간 대형 유통업체 납품과 미국 수출로 품질을 증명해왔습니다.
+                        </p>
+
+                        <p class="colored_red">
+                            <strong>
+                                맛은 기본,<br>
+                                그 위에 안심을 더합니다.
+                            </strong>
                         </p>
                     </div>
                     <div class="greeting-image">
@@ -209,7 +214,7 @@
                     <p>주소: 17099 경기도 용인시 기흥구 한일로 49 (공세동) 좋은만남</p>
                     <p>사업자등록번호: 142-04-13490</p>
                     <p>통신판매사업자번호: 제 2024-용인기흥-2746 호</p>
-                    <p>개인정보관리책임자: 윤현우</p>
+                    <p>개인정보관리책임자: <span class="privacy-officer-name notranslate">윤현우</span></p>
                 </address>
                 <!-- 사이트맵 -->
                 <nav class="site-footer__nav">
@@ -263,12 +268,34 @@
           var m = document.cookie.match(/googtrans=([^;]+)/);
           return m ? (m[1].split('/')[2] || 'ko') : 'ko';
         }
+        var langToClass = { 'zh-CN': 'chinese', ja: 'japanese', en: 'english' };
         function updateLangBtn() {
           var lang = getCurrentLang();
-          var btn = document.querySelector('.lang-btn');
-          if (btn) btn.textContent = (langLabels[lang] || 'KR') + ' ▾';
+          var label = langLabels[lang] || 'KR';
+          document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            var textEl = btn.querySelector('.lang-btn-text');
+            if (textEl) textEl.textContent = label;
+            else btn.textContent = label + ' ▾';
+          });
+        }
+        function updateLanguageClass() {
+          var lang = getCurrentLang();
+          var addClass = langToClass[lang] || null;
+          document.querySelectorAll('.language').forEach(function(el) {
+            el.classList.remove('chinese', 'japanese', 'english');
+            if (addClass) el.classList.add(addClass);
+          });
         }
         updateLangBtn();
+        updateLanguageClass();
+        // CN/JP/EN 선택 시 개인정보관리책임자 이름을 'Yoon hong 대표님'으로 표시
+        (function() {
+          var lang = getCurrentLang();
+          var nameEl = document.querySelector('.privacy-officer-name');
+          if (nameEl) {
+            nameEl.textContent = (lang === 'zh-CN' || lang === 'ja' || lang === 'en') ? 'Yoon hong 대표님' : '윤현우';
+          }
+        })();
         document.querySelectorAll('.lang-dropdown a[data-lang]').forEach(function(a) {
           a.addEventListener('click', function(e) {
             e.preventDefault();

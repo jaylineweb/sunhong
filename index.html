@@ -66,6 +66,12 @@
                 <div class="language">
                     <div class="language-inner">
                         <span class="taegukgi-icon">
+                            <!--
+                            기능 설정 : 
+                            CN =>  <div class="language chinese"></div>
+                            JP =>  <div class="language japanese"></div>
+                            EN =>  <div class="language english"></div>
+                            -->
                             <img src="./common/img/flag_shapes/flag_kr_circle.png" alt="택스기">
                         </span>
                         <button class="lang-btn">
@@ -210,7 +216,7 @@
     
                     <!-- 왼쪽 이미지 -->
                     <div class="brand-story__visual">
-                        <img src="./images/main/section1.png" alt="">
+                        <img src="./images/main/section1_view.png" alt="">
                     </div>
         
                     <!-- 오른쪽 텍스트 -->
@@ -342,7 +348,7 @@
                         <p>주소: 17099 경기도 용인시 기흥구 한일로 49 (공세동) 좋은만남</p>
                         <p>사업자등록번호: 142-04-13490</p>
                         <p>통신판매사업자번호: 제 2024-용인기흥-2746 호</p>
-                        <p>개인정보관리책임자: 윤현우</p>
+                        <p>개인정보관리책임자: <span class="privacy-officer-name notranslate">윤현우</span></p>
                     </address>
                     <!-- 사이트맵 -->
                     <nav class="site-footer__nav">
@@ -397,6 +403,7 @@
           var m = document.cookie.match(/googtrans=([^;]+)/);
           return m ? (m[1].split('/')[2] || 'ko') : 'ko';
         }
+        var langToClass = { 'zh-CN': 'chinese', ja: 'japanese', en: 'english' };
         function updateLangBtn() {
           var lang = getCurrentLang();
           var label = langLabels[lang] || 'KR';
@@ -406,7 +413,24 @@
             else btn.textContent = label + ' ▾';
           });
         }
+        function updateLanguageClass() {
+          var lang = getCurrentLang();
+          var addClass = langToClass[lang] || null;
+          document.querySelectorAll('.language').forEach(function(el) {
+            el.classList.remove('chinese', 'japanese', 'english');
+            if (addClass) el.classList.add(addClass);
+          });
+        }
         updateLangBtn();
+        updateLanguageClass();
+        // CN/JP/EN 선택 시 개인정보관리책임자 이름을 'Yoon hong 대표님'으로 표시
+        (function() {
+          var lang = getCurrentLang();
+          var nameEl = document.querySelector('.privacy-officer-name');
+          if (nameEl) {
+            nameEl.textContent = (lang === 'zh-CN' || lang === 'ja' || lang === 'en') ? 'Yoon hong 대표님' : '윤현우';
+          }
+        })();
         document.querySelectorAll('.lang-dropdown a[data-lang]').forEach(function(a) {
           a.addEventListener('click', function(e) {
             e.preventDefault();

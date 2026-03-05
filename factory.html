@@ -282,7 +282,7 @@
                     <p>주소: 17099 경기도 용인시 기흥구 한일로 49 (공세동) 좋은만남</p>
                     <p>사업자등록번호: 142-04-13490</p>
                     <p>통신판매사업자번호: 제 2024-용인기흥-2746 호</p>
-                    <p>개인정보관리책임자: 윤현우</p>
+                    <p>개인정보관리책임자: <span class="privacy-officer-name notranslate">윤현우</span></p>
                 </address>
                 <!-- 사이트맵 -->
                 <nav class="site-footer__nav">
@@ -336,12 +336,34 @@
           var m = document.cookie.match(/googtrans=([^;]+)/);
           return m ? (m[1].split('/')[2] || 'ko') : 'ko';
         }
+        var langToClass = { 'zh-CN': 'chinese', ja: 'japanese', en: 'english' };
         function updateLangBtn() {
           var lang = getCurrentLang();
-          var btn = document.querySelector('.lang-btn');
-          if (btn) btn.textContent = (langLabels[lang] || 'KR') + ' ▾';
+          var label = langLabels[lang] || 'KR';
+          document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            var textEl = btn.querySelector('.lang-btn-text');
+            if (textEl) textEl.textContent = label;
+            else btn.textContent = label + ' ▾';
+          });
+        }
+        function updateLanguageClass() {
+          var lang = getCurrentLang();
+          var addClass = langToClass[lang] || null;
+          document.querySelectorAll('.language').forEach(function(el) {
+            el.classList.remove('chinese', 'japanese', 'english');
+            if (addClass) el.classList.add(addClass);
+          });
         }
         updateLangBtn();
+        updateLanguageClass();
+        // CN/JP/EN 선택 시 개인정보관리책임자 이름을 'Yoon hong 대표님'으로 표시
+        (function() {
+          var lang = getCurrentLang();
+          var nameEl = document.querySelector('.privacy-officer-name');
+          if (nameEl) {
+            nameEl.textContent = (lang === 'zh-CN' || lang === 'ja' || lang === 'en') ? 'Yoon hong 대표님' : '윤현우';
+          }
+        })();
         document.querySelectorAll('.lang-dropdown a[data-lang]').forEach(function(a) {
           a.addEventListener('click', function(e) {
             e.preventDefault();

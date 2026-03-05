@@ -249,12 +249,13 @@
 
 
 .greeting{padding:120px 0;}
-.greeting-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:0;max-width:1024px;margin:0 auto;padding:0 20px;}
+.greeting-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:0;max-width:1310px;margin:0 auto;padding:0 20px;}
 .greeting-inner:before{display:none;}
-.greeting-text h2{margin-bottom:50px;font-size:40px;font-family:"Pretendard";font-weight:600;line-height:1.2;}
+.greeting-text h2{margin-bottom:50px;font-size:50px;font-family:"Pretendard";font-weight:800;line-height:1.2;}
 .greeting-text p{margin-bottom:35px;color:#222;font-size:24px;line-height:1.2;letter-spacing:-0.025em;}
 .greeting-image{min-width:0;}
 .greeting-image img{display:block;width:100%;max-width:482px;margin-left:auto;}
+.greeting-text p.colored_red{color:#ff0000;}
 
 /* 모바일 */
 /* @media(max-width:768px){
@@ -287,10 +288,10 @@
 }
 
 .autograph{color:inherit;}
-.autograph .inner{width:1024px;margin:0 auto;}
-.autograph .autograph_text{position:relative;font-size:25px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
-.autograph_img{position:absolute;top:-17px;right:-20px;width:90px;height:auto;max-width:none;max-height:none;object-fit:contain;}
-@media all and (max-width:1024px){
+.autograph .inner{width:1310px;margin:0 auto;}
+.autograph .autograph_text{position:relative;margin-top:6%;font-size:50px;font-family:"Pretendard";color:rgb(1, 1, 1);font-weight:500;line-height:1.2;text-align:right;}
+.autograph_img {position:absolute;top:-30px;right:-20px;width:160px;height:auto;max-width:none;max-height:none;object-fit:contain;}
+@media all and (max-width:1310px){
   .autograph .inner{width:100%;}
 }
 @media all and (max-width:768px){
