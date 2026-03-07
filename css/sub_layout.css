@@ -555,7 +555,7 @@
 }
 @media all and (max-width:1388px){
   .partners__grid{display:flex;flex-wrap:wrap;row-gap:25px;}
-  .partners__grid img{width:calc(100% / 3);}
+  .partners__grid img{width:calc(100% / 3);max-height:150px;}
 }
 /* 모바일 */
 @media(max-width:768px){
