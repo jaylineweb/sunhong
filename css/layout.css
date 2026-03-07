@@ -180,7 +180,7 @@ html{}
 /* name */
 .products__name{font-size:15px;font-family: 'NotoSansKR';font-weight: 500;text-align: center;}
 /* more */
-.products__more{margin-top: 94px;}
+.products__more{margin-top:40px;}
 .products__more-btn{display:inline-flex;align-items:center;justify-content:center;border:solid 1px #ed0f0f;padding:8px 16px;font-size:18px;font-family: 'NotoSansKR';font-weight:600;letter-spacing:-0.025em;border-radius:4px;transition:background-color 0.3s ease;outline:0;text-decoration:none;background-color:#ed0f0f;color:#ffffff;}
 
 /* ========== media query: rowgroup4 (products) ========== */
