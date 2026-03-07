@@ -2,7 +2,7 @@
 $page_title = '문의하기';
 
 // 문의 접수 시 받을 이메일 (필요 시 수정)
-$admin_email = 'jayremind2@naver.com';
+$admin_email = 'sales@yemat1004.com';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $company     = isset($_POST['company'])     ? trim($_POST['company'])     : '';
