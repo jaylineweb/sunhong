@@ -2,7 +2,7 @@
 *{margin:0; padding:0; box-sizing:border-box;}
 body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 .header{position:relative; z-index:100; width:100%; border-bottom:1px solid #e5e5e5; background:#fff;}
-.header-inner{display:flex;max-width: 1580px;height: 98px;margin:0 auto;padding: 0 10px;align-items:center;justify-content:space-between;}
+.header-inner{display:flex;max-width:1280px;height: 98px;margin:0 auto;padding: 0 10px;align-items:center;justify-content:space-between;}
 
 /* Logo */
 .logo img{height: 83px;}
@@ -82,7 +82,7 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 }
 
 .site-footer{padding:120px 0; background:#fafafa; color:#919191; font-size:14px;}
-.site-footer__inner{display:grid;max-width: 1756px;margin:auto;grid-template-columns:160px 1.5fr 1fr 1fr 1.2fr;gap:40px;align-items:start;}
+.site-footer__inner{display:grid;max-width: 1280px;margin:auto;grid-template-columns:160px 1.5fr 1fr 1fr 1.2fr;gap:40px;align-items:start;}
 .site-footer img{display:block;}
 
 /* 로고 */

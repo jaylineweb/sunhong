@@ -166,6 +166,7 @@ html{}
 
 /* ========== rowgroup4 (products) ========== */
 .products{display:flex;width:100%;max-width:1920px;margin:0 auto;padding:120px 0;flex-direction:column;align-items:center;background-color: #fafaf7;}
+.products__inner{max-width:1280px;width:100%;margin:0 auto;}
 .products__header{margin-bottom: 93px;text-align:center;}
 .products__title{margin-bottom:36px; font-size:42px; font-weight:700; font-family:'Noto Sans KR',sans-serif; color:#ed0f0f; line-height:1.2;}
 .products__subtitle{font-size:20px;font-family: 'NotoSansKR';font-weight: 500;}
@@ -185,6 +186,7 @@ html{}
 /* ========== media query: rowgroup4 (products) ========== */
 @media (max-width:1280px){
     .products{padding:80px 24px; gap:36px;}
+    .products__inner{max-width:100%;}
     .products__title{font-size:36px; margin-bottom:28px;}
     .products__subtitle{font-size:18px;}
     .products__list{flex-wrap:wrap; justify-content:center; gap:20px;}
