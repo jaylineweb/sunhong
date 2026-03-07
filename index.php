@@ -74,42 +74,44 @@
             </div>
             <div class="row4group">
                 <div class="products">
-                    <div class="products__header">
-                        <h2 class="products__title">OUR PRODUCTS</h2>
-                        <p class="products__subtitle">
-                            건어물 전문 기업으로서, 꾸준히 연구하고 다양한 제품을 생산하고 있습니다.
-                        </p>
+                    <div class="products__inner">
+                        <div class="products__header">
+                            <h2 class="products__title">OUR PRODUCTS</h2>
+                            <p class="products__subtitle">
+                                건어물 전문 기업으로서, 꾸준히 연구하고 다양한 제품을 생산하고 있습니다.
+                            </p>
+                        </div>
+                        <ul class="products__list">
+                            <li class="products__item">
+                                <img src="./images/main/product01.png" alt="">
+                                <span class="products__name">
+                                    철판에 두번 구워
+                                    <br>부드러운 쥐포
+                                </span>
+                            </li>
+                            <li class="products__item">
+                                <img src="./images/main/product02.png" alt="">
+                                <span class="products__name">
+                                    두툼한 순살 가득
+                                    <br>왕 아귀포
+                                </span>
+                            </li>
+                            <li class="products__item">
+                                <img src="./images/main/product03.png" alt="">
+                                <span class="products__name">
+                                    두번구워 찢은
+                                    <br>손질먹태
+                                </span>
+                            </li>
+                            <li class="products__item">
+                                <img src="./images/main/product04.png" alt="">
+                                <span class="products__name">
+                                    맥반석 감칠맛이 가득가득
+                                    <br>오징어 몸통구이
+                                </span>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="products__list">
-                        <li class="products__item">
-                            <img src="./images/main/product01.png" alt="">
-                            <span class="products__name">
-                                철판에 두번 구워
-                                <br>부드러운 쥐포
-                            </span>
-                        </li>
-                        <li class="products__item">
-                            <img src="./images/main/product02.png" alt="">
-                            <span class="products__name">
-                                두툼한 순살 가득
-                                <br>왕 아귀포
-                            </span>
-                        </li>
-                        <li class="products__item">
-                            <img src="./images/main/product03.png" alt="">
-                            <span class="products__name">
-                                두번구워 찢은
-                                <br>손질먹태
-                            </span>
-                        </li>
-                        <li class="products__item">
-                            <img src="./images/main/product04.png" alt="">
-                            <span class="products__name">
-                                맥반석 감칠맛이 가득가득
-                                <br>오징어 몸통구이
-                            </span>
-                        </li>
-                    </ul>
                     <div class="products__more">
                         <a href="./product.php" class="products__more-btn">제품 더보기</a>
                     </div>
