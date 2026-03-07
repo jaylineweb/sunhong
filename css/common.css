@@ -138,3 +138,14 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
     .site-footer__cta{margin-top:8px;}
 }
 
+/* 개인정보처리방침 모달 (?mode=privacy / ?mode=privay) */
+.privacy-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;}
+.privacy-modal{position:relative;width:100%;max-width:640px;max-height:85vh;background:#fff;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;flex-direction:column;}
+.privacy-modal__header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid #eee;}
+.privacy-modal__title{margin:0;font-size:20px;font-weight:700;color:#222;}
+.privacy-modal__close{width:36px;height:36px;border:none;background:none;cursor:pointer;font-size:24px;line-height:1;color:#666;padding:0;display:flex;align-items:center;justify-content:center;border-radius:4px;}
+.privacy-modal__close:hover{background:#f0f0f0;color:#222;}
+.privacy-modal__body{overflow-y:auto;padding:24px;font-size:14px;line-height:1.7;color:#444;}
+.privacy-modal__body .privacy-modal__text{word-break:keep-all;}
+.privacy-modal__body strong{color:#222;}
+

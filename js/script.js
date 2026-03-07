@@ -1,3 +1,74 @@
+// ----- 개인정보처리방침 모달 (?mode=privacy 또는 ?mode=privay) -----
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var mode = params.get('mode') || '';
+  if (mode !== 'privacy' && mode !== 'privay') return;
+
+  var base = window.location.pathname.replace(/\/[^/]*$/, '/') || '/';
+  if (base !== '/') base = window.location.origin + base;
+  else base = window.location.origin + '/';
+  var contentUrl = base + 'privacy_modal_content.html';
+
+  var overlay = document.createElement('div');
+  overlay.className = 'privacy-modal-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'privacy-modal-title');
+
+  var modal = document.createElement('div');
+  modal.className = 'privacy-modal';
+
+  var header = document.createElement('div');
+  header.className = 'privacy-modal__header';
+  var title = document.createElement('h2');
+  title.id = 'privacy-modal-title';
+  title.className = 'privacy-modal__title';
+  title.textContent = '개인정보처리방침';
+  var closeBtn = document.createElement('button');
+  closeBtn.type = 'button';
+  closeBtn.className = 'privacy-modal__close';
+  closeBtn.setAttribute('aria-label', '닫기');
+  closeBtn.innerHTML = '&times;';
+  header.appendChild(title);
+  header.appendChild(closeBtn);
+
+  var body = document.createElement('div');
+  body.className = 'privacy-modal__body';
+  body.innerHTML = '<p style="color:#888;">불러오는 중...</p>';
+
+  modal.appendChild(header);
+  modal.appendChild(body);
+  overlay.appendChild(modal);
+
+  function closeModal() {
+    document.body.style.overflow = '';
+    overlay.remove();
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function onEsc(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+      document.removeEventListener('keydown', onEsc);
+    }
+  });
+
+  document.body.style.overflow = 'hidden';
+  document.body.appendChild(overlay);
+
+  fetch(contentUrl)
+    .then(function (res) { return res.text(); })
+    .then(function (html) {
+      body.innerHTML = html;
+    })
+    .catch(function () {
+      body.innerHTML = '<p style="color:#c00;">내용을 불러올 수 없습니다.</p>';
+    });
+})();
+
 // ----- Google Translate & 언어 전환 (공통) -----
 function googleTranslateElementInit() {
   if (typeof google !== 'undefined' && google.translate && google.translate.TranslateElement) {
