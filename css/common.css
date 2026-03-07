@@ -127,11 +127,11 @@ body, h1, h2, h3, h4, h5, h6, p, span{font-family:'Noto Sans KR',sans-serif;}
 @media (max-width:480px){
     .site-footer{padding:40px 12px; font-size:12px;}
     .site-footer__inner{grid-template-columns:1fr; gap:24px; text-align:center;}
-    .site-footer__logo{justify-self:center;}
-    .site-footer__company{text-align:center;}
-    .site-footer__nav{text-align:center;}
-    .site-footer__nav ul{display:inline-block; text-align:left;}
-    .site-footer__policy{text-align:center;}
+    .site-footer__logo{justify-self:flex-start;}
+    .site-footer__company{text-align:left;}
+    .site-footer__nav{text-align:left;}
+    .site-footer__nav ul{display:flex;flex-wrap:wrap; gap:10px; text-align:left;}
+    .site-footer__policy{text-align:left;}
     .site-footer__policy a{display:inline-block; margin:0 6px 6px 0;}
     .site-footer__contact{align-items:center; text-align:center;}
     .site-footer__contact a{justify-content:center;}
