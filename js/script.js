@@ -1,35 +1,41 @@
-// ----- 개인정보처리방침 모달 (?mode=privacy 또는 ?mode=privay) -----
+// ----- 이용약관/개인정보처리방침 모달 (?mode=policy / ?mode=privacy / ?mode=privay) -----
 (function () {
   var params = new URLSearchParams(window.location.search);
   var mode = params.get('mode') || '';
-  if (mode !== 'privacy' && mode !== 'privay') return;
+  var config = null;
+  if (mode === 'policy') {
+    config = { title: '이용약관', file: 'policy_modal_content.html' };
+  } else if (mode === 'privacy' || mode === 'privay') {
+    config = { title: '개인정보처리방침', file: 'privacy_modal_content.html' };
+  }
+  if (!config) return;
 
   var base = window.location.pathname.replace(/\/[^/]*$/, '/') || '/';
   if (base !== '/') base = window.location.origin + base;
   else base = window.location.origin + '/';
-  var contentUrl = base + 'privacy_modal_content.html';
+  var contentUrl = base + config.file;
 
   var overlay = document.createElement('div');
   overlay.className = 'privacy-modal-overlay';
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
-  overlay.setAttribute('aria-labelledby', 'privacy-modal-title');
+  overlay.setAttribute('aria-labelledby', 'terms-modal-title');
 
   var modal = document.createElement('div');
   modal.className = 'privacy-modal';
 
   var header = document.createElement('div');
   header.className = 'privacy-modal__header';
-  var title = document.createElement('h2');
-  title.id = 'privacy-modal-title';
-  title.className = 'privacy-modal__title';
-  title.textContent = '개인정보처리방침';
+  var titleEl = document.createElement('h2');
+  titleEl.id = 'terms-modal-title';
+  titleEl.className = 'privacy-modal__title';
+  titleEl.textContent = config.title;
   var closeBtn = document.createElement('button');
   closeBtn.type = 'button';
   closeBtn.className = 'privacy-modal__close';
   closeBtn.setAttribute('aria-label', '닫기');
   closeBtn.innerHTML = '&times;';
-  header.appendChild(title);
+  header.appendChild(titleEl);
   header.appendChild(closeBtn);
 
   var body = document.createElement('div');
