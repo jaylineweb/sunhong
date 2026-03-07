@@ -145,31 +145,31 @@
             <section class="contact-form">
                 <div class="inner">
 
-                    <form id="contactForm">
+                    <form id="contactForm" action="" method="post">
 
                         <div class="field">
-                            <label>회사명 *</label>
-                            <input type="text" required>
+                            <label for="company">회사명 *</label>
+                            <input type="text" id="company" name="company" required>
                         </div>
 
                         <div class="field">
-                            <label>담당자 성함 / 부서명 / 직함 *</label>
-                            <input type="text" required>
+                            <label for="contact_info">담당자 성함 / 부서명 / 직함 *</label>
+                            <input type="text" id="contact_info" name="contact_info" required>
                         </div>
 
                         <div class="field">
-                            <label>담당자 연락처 *</label>
-                            <input type="tel" required>
+                            <label for="phone">담당자 연락처 *</label>
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
 
                         <div class="field">
-                            <label>담당자 이메일 *</label>
-                            <input type="email" required>
+                            <label for="email">담당자 이메일 *</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="field">
-                            <label>문의 내용 *</label>
-                            <textarea rows="5" required></textarea>
+                            <label for="message">문의 내용 *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
 
                         <div class="form-control">회사명(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.<br>
@@ -328,7 +328,7 @@
 이 개인정보 처리방침은 20XX. X. X. 부터 적용됩니다.</div>
                         <div class="privacy">
                             <label>
-                                <input type="checkbox" required>
+                                <input type="checkbox" name="privacy_agree" value="1" required>
                                 개인정보 수집 및 이용에 동의합니다.
                             </label>
                         </div>
