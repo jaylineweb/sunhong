@@ -68,7 +68,8 @@ if ($s && $e) {
         $main = str_replace('name="contact_info" required', 'name="contact_info" value="' . htmlspecialchars($contact_info ?? '') . '" required', $main);
         $main = str_replace('name="phone" required', 'name="phone" value="' . htmlspecialchars($phone ?? '') . '" required', $main);
         $main = str_replace('name="email" required', 'name="email" value="' . htmlspecialchars($email ?? '') . '" required', $main);
-        $main = str_replace('</textarea>', htmlspecialchars($message ?? '') . '</textarea>', $main, 1);
+        $limit = 1;
+        $main = str_replace('</textarea>', htmlspecialchars($message ?? '') . '</textarea>', $main, $limit);
     }
     echo $main;
 }
