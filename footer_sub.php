@@ -48,5 +48,6 @@
     <div id="google_translate_element" class="sr-only" aria-hidden="true"></div>
     <script src="./js/script.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./js/certificate-lightbox.js"></script>
 </body>
 </html>
